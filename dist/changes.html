@@ -1,0 +1,1477 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#181a1b">
+  <meta name="description" content="История изменений «Светоча» по версиям. Нечисть, охотники, баланс, анимации и исправления.">
+  <title>Изменения — Светоч</title>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="changes.css">
+  <script src="changes.js" defer></script>
+</head>
+<body class="patch-site" id="top">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="./">Светоч</a>
+      <nav aria-label="Основное меню">
+        <a href="./#game">Об игре</a>
+        <a class="header-build" href="./#download">Сборка для участников</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="patch-masthead">
+      <div class="shell patch-masthead-inner"><h1>Изменения</h1></div>
+    </div>
+
+    <div class="shell patch-layout">
+      <div class="patch-picker" hidden>
+        <label for="patch-version">Версия</label>
+        <select id="patch-version"></select>
+      </div>
+      <nav class="patch-versions" aria-label="Версии">
+        <h2>Версии</h2>
+        <ol>
+<li><a href="#after-preview-8"><span>Атаки, разлом и дух</span><small>После Preview 8</small></a></li>
+<li><a href="#preview-8"><span>Двойной натиск</span><small>Preview 8</small></a></li>
+<li><a href="#preview-7"><span>Десять минут обороны</span><small>Preview 7</small></a></li>
+<li><a href="#preview-6"><span>Тёмный лагерь</span><small>Preview 6</small></a></li>
+<li><a href="#preview-5"><span>Огонь и сталь</span><small>Preview 5</small></a></li>
+<li><a href="#preview-4"><span>Управление и связь</span><small>Preview 4</small></a></li>
+<li><a href="#preview-3"><span>Три волны</span><small>Preview 3</small></a></li>
+<li><a href="#preview-2"><span>Отряд по сети</span><small>Preview 2</small></a></li>
+<li><a href="#preview-1"><span>Ночная вылазка</span><small>Preview 1</small></a></li>
+<li><a href="#prototype"><span>Первый прототип</span><small>До Preview</small></a></li>
+</ol>
+      </nav>
+
+      <div class="patch-entries">
+        <article class="patch-notes" id="after-preview-8" aria-labelledby="after-preview-8-title">
+<header class="patch-version"><p><span>После Preview 8</span> <time datetime="2026-11-19">19 ноября 2026</time></p><h2 id="after-preview-8-title" tabindex="-1">Атаки, разлом и дух</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#after-preview-8-general">Общее</a> <a href="#after-preview-8-sprites">Герои</a> <a href="#after-preview-8-enemies">Нечисть и боссы</a></nav></header>
+<section class="patch-group" id="after-preview-8-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Освещение и интерфейс</h4>
+<ul>
+<li><strong>Предупреждение —</strong> Перед обороной фонари мерцают с разным ритмом.</li>
+<li><strong>Затемнение депо —</strong> После предупреждения темнота плавно усиливается по мере удаления от светоча.</li>
+<li>Уровень затемнения видят и клиенты LAN.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Освещение депо</h4>
+<p>По мере потери здоровья светоч тускнеет, а складки вращающейся вуали становятся реже.</p>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/lanterns.webp"><img src="assets/history/lanterns.gif" width="640" height="408" loading="lazy" decoding="async" alt="Фонари начинают мерцать, затем депо темнеет"></picture><figcaption>Мерцание фонарей и наступление темноты <a class="patch-motion-link" href="assets/history/lanterns.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</section>
+<section class="patch-group patch-entity-section" id="after-preview-8-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="after-preview-8-guard" data-entity="guard" aria-labelledby="after-preview-8-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-guard.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-guard-title">Дозорный</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>Попадание взмахом Дозорного считается от его текущей позиции.</li>
+<li>Отступление уводит зону удара, а сближение позволяет достать врага.</li>
+<li>Дальность остаётся <strong>70 пикс</strong>.</li>
+<li><strong>След палаша —</strong> На ходу следует за текущей позой и положением Дозорного, в том числе в LAN.</li>
+</ul>
+<div class="patch-entity-clips">
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/guard.webp"><img src="assets/history/guard.gif" width="640" height="480" loading="lazy" decoding="async" alt="Дозорный атакует и перемещается"></picture><figcaption>Взмах Дозорного на ходу <a class="patch-motion-link" href="assets/history/guard.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="after-preview-8-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="after-preview-8-bat" data-entity="bat" aria-labelledby="after-preview-8-bat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-bat.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-bat-title">Летучая мышь</h4></header>
+<div class="patch-entity-body">
+<h5>Рывок</h5>
+<ul>
+<li><strong>Скорость рывка —</strong> 270 → 400 пикс/с без замедлений.</li>
+<li><strong>Длительность рывка —</strong> 0,45 → 0,65 с.</li>
+<li><strong>Расчётная дальность —</strong> около 122 → 260 пикс без препятствий и замедлений.</li>
+<li><strong>Предупреждение —</strong> Убраны линия и кольцо. Подготовку показывает поза.</li>
+</ul>
+<div class="patch-entity-clips">
+<figure class="patch-clip" id="after-preview-8-predator-demo"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/predators.webp"><img src="assets/history/predators.gif" width="640" height="416" loading="lazy" decoding="async" alt="Оборотень и летучая мышь выполняют рывок"></picture><figcaption>Атаки оборотня и летучей мыши <a class="patch-motion-link" href="assets/history/predators.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+<section class="patch-entity" id="after-preview-8-werewolf" data-entity="werewolf" aria-labelledby="after-preview-8-werewolf-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-werewolf.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-werewolf-title">Оборотень</h4></header>
+<div class="patch-entity-body">
+<h5>Рывок</h5>
+<ul>
+<li>При сближении останавливается у границы столкновения с целью, включая постамент светоча.</li>
+<li><strong>Предупреждение —</strong> Убраны линия и кольцо. Подготовку показывает поза.</li>
+</ul>
+<p class="patch-media-reference"><a class="text-link" href="#after-preview-8-predator-demo">Атаки оборотня и летучей мыши в бою</a></p>
+</div></section>
+<section class="patch-entity" id="after-preview-8-mimic" data-entity="mimic" aria-labelledby="after-preview-8-mimic-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v9-mimic.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-mimic-title">Мимик</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>У проглоченного охотника в интерфейсе отображается состояние «Проглочен».</li>
+<li><strong>Спрайт сундука —</strong> Корпус закрытого мимика приведён к размеру и цветам обычного сундука.</li>
+</ul>
+<h5>Захват</h5>
+<ul>
+<li>Теперь проглатывает охотника и держит на месте. Раньше тащил его за собой.</li>
+<li>Проглоченный охотник исчезает с арены и защищён от внешних ударов. При освобождении возвращаются спрайт, свет от снаряжения и столкновения.</li>
+<li><strong>Раскрытие пасти —</strong> Убран круг предупреждения.</li>
+<li><strong>Проглатывание —</strong> Движение пасти показывает, что охотник внутри.</li>
+<li><strong>Освобождение —</strong> Мимик выплёвывает пленника.</li>
+</ul>
+<div class="patch-entity-clips">
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/mimic.webp"><img src="assets/history/mimic.gif" width="640" height="260" loading="lazy" decoding="async" alt="Сундук превращается в мимика и проглатывает охотника"></picture><figcaption>Мимик и освобождение пленника <a class="patch-motion-link" href="assets/history/mimic.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+<section class="patch-entity" id="after-preview-8-boss" data-entity="boss" aria-labelledby="after-preview-8-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-boss.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>Полоса здоровья босса остаётся видна поверх эффекта разлома.</li>
+</ul>
+<h5>Высасывание света</h5>
+<ul>
+<li>Пульсация светоча предупреждает об атаке.</li>
+<li>Пульсация сменяется потоком света к разлому. После попадания светоч тускнеет до нового уровня за 1,28 с.</li>
+<li>Если атаки охотников прерывают заряд в последний момент, светоч не получает урон. Начавшая перетекать вуаль рассеивается.</li>
+<li><strong>Поднятие рук —</strong> Босс полностью поднимает руки до появления дыма.</li>
+<li><strong>Разлом —</strong> Три дымных сгустка сходятся между поднятыми руками.</li>
+<li><strong>Поток света —</strong> Вуаль уплотняется к моменту удара, доходит до входа и гаснет внутри разлома.</li>
+<li><strong>Затемнение —</strong> Во время поглощения тень вокруг босса расширяется.</li>
+<li><strong>Закрытие разлома —</strong> Края смыкаются после того, как разлом поглощает плотную волну света.</li>
+<li><strong>Сбитие заряда —</strong> Тени и вуаль рассеиваются с той фазы, в которой прервали заряд.</li>
+</ul>
+<div class="patch-entity-clips">
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/rift.webp"><img src="assets/history/rift.gif" width="640" height="252" loading="lazy" decoding="async" alt="Золотая вуаль светоча входит в разлом между поднятыми руками босса"></picture><figcaption>Пожиратель света · Струя входит в разлом <a class="patch-motion-link" href="assets/history/rift.gif">Открыть анимацию</a></figcaption></figure>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/rift-interrupted.webp"><img src="assets/history/rift-interrupted.gif" width="640" height="380" loading="lazy" decoding="async" alt="Вуаль распадается при прерывании атаки"></picture><figcaption>Прерывание заряда босса <a class="patch-motion-link" href="assets/history/rift-interrupted.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+<section class="patch-entity" id="after-preview-8-spirit" data-entity="spirit" aria-labelledby="after-preview-8-spirit-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v9-spirit.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="after-preview-8-spirit-title">Дух из темноты</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li>В интерфейсе отображается состояние «Схвачен духом». Захват видят и клиенты LAN.</li>
+<li><strong>Новая механика —</strong> Дух может устроить засаду во время боя вдали от светоча.</li>
+</ul>
+<h5>Засада</h5>
+<ul>
+<li><strong>Вне света —</strong> дальше 330 пикс</li>
+<li><strong>Первая проверка —</strong> после 5 с</li>
+<li><strong>Шанс —</strong> 25%</li>
+<li><strong>Рывок с пленником —</strong> до 108 пикс</li>
+<li><strong>Защита после побега —</strong> 120 с</li>
+<li>Появляется только во время боя. Повторная проверка шанса — через 2,5 с.</li>
+<li><strong>Предупреждение —</strong> 0,6 с до захвата.</li>
+<li><strong>Унос пленника —</strong> 64 пикс/с. Дух держит охотника без прямого урона.</li>
+<li><strong>Освобождение —</strong> Заново удерживать взаимодействие 2 с.</li>
+<li>Защита действует на вырвавшегося охотника. Пауза останавливает отсчёт.</li>
+<li>После защиты нужно снова провести в темноте 5 с.</li>
+<li><strong>Появление в темноте —</strong> Добавлена отдельная фаза появления.</li>
+<li><strong>Захват —</strong> Добавлена отдельная фаза захвата.</li>
+<li><strong>Унос пленника —</strong> Добавлена отдельная фаза перемещения.</li>
+<li><strong>Уход духа —</strong> Добавлена анимация ухода при освобождении пленника.</li>
+</ul>
+<div class="patch-entity-clips">
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/chest-spirit.webp"><img src="assets/history/chest-spirit.gif" width="640" height="400" loading="lazy" decoding="async" alt="Из открытого сундука вылетает дух"></picture><figcaption>Испуг при открытии сундука <a class="patch-motion-link" href="assets/history/chest-spirit.gif">Открыть анимацию</a></figcaption></figure>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/ghost-escape.webp"><img src="assets/history/ghost-escape.gif" width="640" height="400" loading="lazy" decoding="async" alt="Дух хватает охотника, который вырывается из захвата"></picture><figcaption>Захват духом и освобождение <a class="patch-motion-link" href="assets/history/ghost-escape.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-8" aria-labelledby="preview-8-title">
+<header class="patch-version"><p><span>Preview 8</span> <time datetime="2026-11-18">18 ноября 2026</time></p><h2 id="preview-8-title" tabindex="-1">Двойной натиск</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-8-general">Общее</a> <a href="#preview-8-items">Предметы</a> <a href="#preview-8-sprites">Герои</a> <a href="#preview-8-enemies">Нечисть и боссы</a> <a href="#preview-8-fixes">Исправления</a> <a href="#preview-8-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-8-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Вылазка и баланс</h4>
+<ul>
+<li>Средний поток врагов для одного игрока <strong>40 → 80 в минуту</strong>. За оборону приходят <strong>800 / 1 440 / 2 080 / 2 720</strong> врагов для отряда от одного до четырёх.</li>
+<li>Добавлены <strong>18</strong> групповых атак. Первая через <strong>1 мин</strong>, следующие каждые <strong>30 с</strong> до <strong>9:30</strong>. Для одного игрока размер группы растёт <strong>10 → 12 → 14</strong>.</li>
+<li>Группа состоит из одного вида обычной нечисти и целиком приходит с одного края или поровну с двух.</li>
+<li>Обычный зомби, нацеленный на светоч, учитывается отдельно от групповых атак.</li>
+<li>Вдвоём размер группы растёт <strong>18 → 22 → 26</strong>, втроём <strong>26 → 32 → 36</strong>, вчетвером <strong>34 → 40 → 48</strong>. В каждом отряде шанс выхода с двух краёв равен <strong>50%</strong>.</li>
+<li>Для нового уровня нужно на <strong>10% больше душ</strong>. Сдача душ больше не лечит. Обычная нечисть роняет лечение с шансом <strong>0,5%</strong>, в отряде шанс делится на его множитель.</li>
+<li>Подбор лечения восстанавливает <strong>25% максимального HP</strong>. Оно притягивается к раненому охотнику, мигает перед исчезновением и пропадает через <strong>30 с</strong>.</li>
+<li>При одинаковом расстоянии лечение летит к охотнику с меньшим текущим HP. При выборе учитывается максимальное HP с бонусами.</li>
+<li>Если доступных улучшений больше нет, игра пропускает выбор и не ставит вылазку на паузу ради пустого окна.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Интерфейс и звук</h4>
+<ul>
+<li>Настройки общей громкости, музыки и реплик открываются из паузы в лагере и вылазке. «Назад» возвращает к паузе.</li>
+<li>В настройках стик переводит фокус один раз на наклон. Удержание стика при открытии меню не меняет выбранный пункт.</li>
+<li>Начатая реплика доигрывает при обычной паузе и во время выбора улучшения.</li>
+<li>Обновлены реплики охотников, выровнена их громкость. У Чумной сестры заменена третья реплика при возвращении в строй.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li>Добавлено улучшение обычной дальности атаки. <strong>+25% базовой дальности</strong> за ранг, до <strong>+75%</strong> после трёх выборов.</li>
+<li>Мышь и правый стик задают направление взгляда и атаки отдельно от движения.</li>
+<li>Взгляд отмечает стрелка у ног, а мышь в бою показывает прицел.</li>
+<li>Без заданного направления автоатака выбирает цель как раньше.</li>
+<li>Охотник может пятиться, сохраняя направление атаки. Курсор за окном или прямо над охотником даёт тот же режим, что нейтральное положение правого стика.</li>
+<li>Маг ставит печать по направлению взгляда. После победы направление всё ещё можно менять, пока отряд забирает награду.</li>
+<li><strong>Стойка —</strong> Поворачивается за мышью или правым стиком, даже когда охотник стоит на месте.</li>
+<li><strong>Ходьба спиной —</strong> Кадры ног проигрываются в обратном порядке. Верх тела продолжает смотреть на цель.</li>
+<li><strong>Наградной сундук.</strong> Спрайт закрытого сундука сменяется открытым на том же месте у пола.</li>
+<li>Положение относительно постамента и персонажей согласовано с границей столкновения.</li>
+<li><strong>Лечение и прицел.</strong> Сфера лечения летит к охотнику и мигает перед исчезновением.</li>
+<li>Во время боя меняется вид курсора, у ног героя поворачивается стрелка направления.</li>
+</ul>
+</section>
+<section class="patch-group" id="preview-8-items">
+<h3>Предметы</h3>
+<ul class="patch-item-list">
+<li class="patch-item-change"><h4>Сфера лечения</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Восстанавливает 25% максимального HP.</li>
+<li>Базовый шанс выпадения — 0,5% с обычной нечисти. В отряде шанс делится на множитель его размера.</li>
+<li>Исчезает через 30 с.</li>
+<li>За 10 с до исчезновения мигает раз в секунду.</li>
+<li>За 5 с до исчезновения мигает дважды в секунду.</li>
+</ul></li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-8-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-8-sister" data-entity="sister" aria-labelledby="preview-8-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-sister.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-8-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<h5>Помощь сестры</h5>
+<ul>
+<li><strong>Свечение нити —</strong> Исправлен эффект от лечебной нити.</li>
+<li><strong>Втягивание нити —</strong> Контур не исчезает при наложении сам на себя в конце действия.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-8-mage" data-entity="mage" aria-labelledby="preview-8-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-mage.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-8-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Полёт сгустка —</strong> Сгусток поворачивает за движущейся целью.</li>
+<li><strong>Попадание сгустка —</strong> Вспышка появляется в точке попадания.</li>
+<li>Снаряд следует за выбранной целью.</li>
+<li>При попадании цель получает полный урон, враги рядом — 10%.</li>
+</ul>
+<h5>Печать</h5>
+<ul>
+<li><strong>Печать —</strong> Рисуется по направлению взгляда.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="preview-8-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-8-boss" data-entity="boss" aria-labelledby="preview-8-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-boss.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-8-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Базовое здоровье —</strong> 2 300 → 2 600 HP</li>
+</ul>
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Порог прерывания —</strong> 150 → 170 урона</li>
+</ul>
+<p class="patch-detail-note">Базовое здоровье и порог прерывания растут с размером отряда.</p>
+</div></section>
+</section>
+<section class="patch-group" id="preview-8-fixes">
+<h3>Исправления</h3>
+<ul>
+<li><strong>Золото.</strong> Выход после успешной эвакуации больше не теряет награду. Сохранение происходит при завершении вылазки.</li>
+<li>Повторное уведомление в LAN не удваивает выплату. При сбое записи прежний баланс сохраняется, а игра повторяет попытку начислить награду.</li>
+<li><strong>LAN.</strong> Если клиент вышел во время возвращения в лагерь, хост снова может управлять своим охотником.</li>
+<li><strong>LAN.</strong> Запоздавшее подтверждение улучшения больше не применяется к новой выдаче улучшений.</li>
+<li><strong>Наградной сундук.</strong> Область столкновения сужена до видимого основания. Теперь к сундуку можно подойти вплотную.</li>
+<li><strong>Отрисовка.</strong> Исправлен порядок отрисовки у портала, перекрытие лагерного светоча и освещение снаряжения.</li>
+<li>Наградной сундук отображается поверх пола как отдельный объект. При открытии спрайт меняется, при завершении вылазки сундук скрывается.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-8-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-8.webp"><img src="assets/history/preview-8.gif" width="640" height="360" loading="lazy" decoding="async" alt="Первая групповая атака нечисти"></picture><figcaption>Первая групповая атака нечисти <a class="patch-motion-link" href="assets/history/preview-8.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-7" aria-labelledby="preview-7-title">
+<header class="patch-version"><p><span>Preview 7</span> <time datetime="2026-11-17">17 ноября 2026</time></p><h2 id="preview-7-title" tabindex="-1">Десять минут обороны</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-7-general">Общее</a> <a href="#preview-7-items">Предметы</a> <a href="#preview-7-sprites">Герои</a> <a href="#preview-7-enemies">Нечисть и боссы</a> <a href="#preview-7-fixes">Исправления</a> <a href="#preview-7-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-7-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Вылазка</h4>
+<ul>
+<li>Три волны с передышками заменены на <strong>10 минут непрерывной обороны</strong>.</li>
+<li>Обычная нечисть приходит с краёв по <strong>40 / 72 / 104 / 136</strong> за минуту в отряде из 1–4 игроков.</li>
+<li>Выход босса завершает поток.</li>
+<li>Обычные враги приходят со всех четырёх сторон.</li>
+<li>Состав потока — <strong>45% зомби, 20% призраков, 15% крыс и 20% летучих мышей</strong>.</li>
+<li>Сундуки повышают частоту появления оборотней.</li>
+<li>После шестого открытого сундука оборона начинается автоматически.</li>
+<li>Вручную начать оборону у светоча теперь может только первый игрок или хост, удерживая взаимодействие <strong>2 с</strong>.</li>
+<li>После гибели босса оставшаяся нечисть исчезает, пленники освобождаются. После боя нужно забрать награду и выйти через портал.</li>
+<li>Базовая скорость ремонта светоча на охотника — <strong>50 / 40 / 30 / 25 HP/с</strong> для отряда из 1 / 2 / 3 / 4 игроков. Бонус Священника убран.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Добыча и прогрессия</h4>
+<ul>
+<li>Уровень отряда растёт только от сданных душ.</li>
+<li>Цена следующего уровня для одного игрока начинается с <strong>10 душ</strong> и прибавляет <strong>12</strong> за уровень.</li>
+<li>Каждые <strong>10 лично сданных душ</strong> восстанавливают <strong>15% недостающего HP</strong>.</li>
+<li>Автоматические бонусы здоровья и урона при повышении уровня заменены личным выбором для каждого охотника.</li>
+<li>Доступны <strong>+20 HP</strong>, <strong>+20% урона</strong>, <strong>+10% частоты атак</strong>, <strong>−10% перезарядки способности</strong> или <strong>+5% скорости</strong> за ранг.</li>
+<li>Игра ждёт подтверждения всех.</li>
+<li>За каждый уровень предлагают до трёх доступных улучшений.</li>
+<li>Пределы — <strong>5</strong> рангов здоровья, урона и частоты атак, <strong>3</strong> перезарядки, <strong>4</strong> скорости.</li>
+<li>Улучшения выбирают и павшие, а в новой вылазке уровни сбрасываются.</li>
+<li>После успешной эвакуации сохраняются <strong>500 золотых</strong> и ещё <strong>100</strong>, если отряд нашёл золото.</li>
+<li>В LAN каждый участник получает выплату на свой ПК, локальный отряд получает одну выплату.</li>
+<li>Артефакты продолжают давать <strong>+20% максимального HP</strong>, <strong>+20% урона атаки</strong> или <strong>+25% ремонта</strong>. Бонус здоровья больше не восстанавливает текущее HP.</li>
+<li>При поражении и отказе от вылазки теряется только золото этой попытки.</li>
+<li>Сохранённое золото остаётся в лагере.</li>
+<li>Проклятие снижает <strong>прямой урон атаки</strong> и отсчитывает свои <strong>20 с</strong> только в бою.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Интерфейс и звук</h4>
+<ul>
+<li>Обновлены экраны выбора охотника, сравнения артефактов и получения улучшений. Души при охотнике и прогресс отряда отображаются отдельно.</li>
+<li>У артефактов отдельно видны название, эффект и вариант «Оставить как есть».</li>
+<li>Мышью можно управлять только выбором игрока с клавиатурой.</li>
+<li>Подсказки других игроков остаются привязаны к их устройствам.</li>
+<li>Добавлены отдельные значки кнопок для клавиатуры и геймпада. Появились реплики способностей, громкость подогнана к существующей озвучке.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li>Альтернативное оружие убрано у всех классов, включая цепную молнию Мага. Каждый охотник сохраняет своё стартовое оружие до конца вылазки.</li>
+<li>Базовая скорость движения унифицирована до <strong>90 пикс/с</strong>. Дистанция атаки Дозорного <strong>70 пикс</strong>, Сестры <strong>65 пикс</strong>, Священника <strong>170 пикс</strong>, Мага <strong>205 пикс</strong>.</li>
+<li><strong>Интерфейс.</strong> У клавиш и кнопок геймпада появились латунные пиктограммы. Подсказка показывает используемое устройство, в том числе у сундуков.</li>
+<li><strong>Лагерь.</strong> Светоч сохранил размер, при этом исправлена чёткость его спрайта.</li>
+<li>Тени остались на полу, охотники не темнеют вместе с ними, а контуры источников света лучше читаются.</li>
+</ul>
+</section>
+<section class="patch-group" id="preview-7-items">
+<h3>Предметы</h3>
+<ul>
+<li><strong>Сундуки с артефактами —</strong> 2 → 4.</li>
+<li>В трёх сундуках по одному артефакту каждого типа. В четвёртом — случайный артефакт.</li>
+</ul>
+<ul class="patch-item-list">
+<li class="patch-item-change"><h4>Кадило</h4><p class="patch-change-kind">Изменён</p><ul>
+<li><strong>Урон —</strong> 12 → 16.</li>
+<li><strong>Интервал атаки —</strong> 1,25 → 1 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Амулет «Здоровье»</h4><p class="patch-change-kind">Изменён</p><ul>
+<li>При экипировке текущее HP больше не восстанавливается.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Золото из сундука</h4><p class="patch-change-kind">Новая добыча</p><ul>
+<li>Один сундук на вылазку. Внутри 100 золотых.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Души из сундука</h4><p class="patch-change-kind">Новая добыча</p><ul>
+<li>Один сундук на вылазку.</li>
+<li>Внутри 20 / 36 / 52 / 68 душ для отряда из 1 / 2 / 3 / 4 игроков.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Сильный удар</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Широкая атака</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Мощный сгусток</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Цепная молния</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Пронизывающий свет</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Быстрая волна</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Быстрая пила</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Широкий взмах</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Материалы</h4><p class="patch-change-kind">Удалено из добычи</p></li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-7-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-7-priest" data-entity="priest" aria-labelledby="preview-7-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-priest.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Урон за удар —</strong> 12 → 16</li>
+<li><strong>Интервал атаки —</strong> 1,25 → 1 с</li>
+</ul>
+<h5>Освящение</h5>
+<ul>
+<li><strong>Перезарядка способности —</strong> 12 → 8,57 с</li>
+<li>Освящение теперь благословляет союзников. Их обычные попадания поджигают врагов.</li>
+<li>Базовая перезарядка благословения <strong>около 8,57 с</strong>. Три улучшения сокращают её до <strong>6 с</strong>.</li>
+<li><strong>Благословение —</strong> У благословлённых охотников появился визуальный эффект.</li>
+<li><strong>Поджог —</strong> Их попадания зажигают отдельное оранжевое пламя на враге.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-7-sister" data-entity="sister" aria-labelledby="preview-7-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-sister.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<h5>Помощь сестры</h5>
+<ul>
+<li>При полном здоровье без цели лечения не тратит способность. Игра показывает причину.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-7-mage" data-entity="mage" aria-labelledby="preview-7-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-mage.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<h5>Печать</h5>
+<ul>
+<li>Печать наносит <strong>4 урона каждые 0,5 с</strong>. Замедление снижено с <strong>70% до 20%</strong>.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="preview-7-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-7-zombie" data-entity="zombie" aria-labelledby="preview-7-zombie-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-zombie.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-zombie-title">Зомби</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Золотые глаза —</strong> Отмечают зомби, идущих к светочу. Свечение следует за глазами при движении и атаке.</li>
+<li><strong>Провокация —</strong> Метка приоритета светоча пропадает после провокации Дозорного.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li>Каждый третий зомби основного потока идёт к светочу. Его выдают золотые глаза. Дозорный может сбить этот приоритет провокацией.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-7-werewolf" data-entity="werewolf" aria-labelledby="preview-7-werewolf-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-werewolf.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-werewolf-title">Оборотень</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Здоровье на четверых —</strong> 672 → 240 HP.</li>
+<li>Здоровье теперь фиксировано на 240 HP при любом размере отряда.</li>
+<li>Для одного игрока замещает обычного врага каждые 180 / 120 / 90 / 60 с после открытия 0 / 1–2 / 3–4 / 5–6 сундуков. В отряде промежуток сокращается.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-7-mimic" data-entity="mimic" aria-labelledby="preview-7-mimic-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-mimic.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-mimic-title">Мимик</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Здоровье на четверых —</strong> 336 → 408 HP. Базовое здоровье 120 HP.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-7-boss" data-entity="boss" aria-labelledby="preview-7-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v6-boss.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-7-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Базовое здоровье —</strong> 400 → 2 300 HP</li>
+<li><strong>Падение —</strong> Доигрывает при переходе к награде.</li>
+<li><strong>Затухание —</strong> Продолжается, пока охотники подходят к сундуку.</li>
+</ul>
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Урон светочу за заряд —</strong> 160 → 250</li>
+<li><strong>Порог прерывания —</strong> 72 → 150 урона</li>
+<li>Разряд прерывают прямые атаки, поджог Священника и печать Мага. Урон от самого светоча не засчитывается.</li>
+</ul>
+<p class="patch-detail-note">Базовое здоровье и порог прерывания растут с размером отряда.</p>
+</div></section>
+</section>
+<section class="patch-group" id="preview-7-fixes">
+<h3>Исправления</h3>
+<ul>
+<li>Устранён повторный подбор одной находки. Одинаковый артефакт нельзя обменять сам на себя, предмет остаётся доступен союзникам.</li>
+<li>Исправлены столкновения с объектами и переходы с геймпада в меню и при выходе из лагеря. Скорость передвижения в лагере приведена к скорости вылазки.</li>
+<li>Исправлено восстановление управления после отключения геймпада и передача управления между меню в LAN.</li>
+<li>Чужой геймпад запрашивает разрешение на вход в локальную игру, вместо того чтобы автоматически добавить охотника.</li>
+<li>В лагере B закрывает выбор охотника.</li>
+<li>Возврат в главное меню доступен через дорогу или паузу с подтверждением.</li>
+<li>В LAN выход из комнаты и прерывание вылазки также требуют подтверждения.</li>
+<li>В лагере восстановлена детализация светоча и теней без затемнения охотников.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-7-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-7.webp"><img src="assets/history/preview-7.gif" width="640" height="360" loading="lazy" decoding="async" alt="Начало непрерывной обороны"></picture><figcaption>Начало непрерывной обороны <a class="patch-motion-link" href="assets/history/preview-7.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-6" aria-labelledby="preview-6-title">
+<header class="patch-version"><p><span>Preview 6</span> <time datetime="2026-11-15">15 ноября 2026</time></p><h2 id="preview-6-title" tabindex="-1">Тёмный лагерь</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-6-general">Общее</a> <a href="#preview-6-sprites">Герои</a> <a href="#preview-6-enemies">Нечисть и боссы</a> <a href="#preview-6-fixes">Исправления</a> <a href="#preview-6-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-6-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Вылазка, интерфейс и звук</h4>
+<ul>
+<li>После победной эвакуации отряд автоматически возвращается в тёмный лагерь.</li>
+<li>При появлении охотников из темноты приближаются красноглазые силуэты, затем лагерь снова освещается.</li>
+<li>Можно досрочно начать оборону, удерживая взаимодействие у светоча <strong>2 с</strong>. Игра предупреждает, что оставшиеся сундуки закроются.</li>
+<li><strong>Вуаль светоча —</strong> Заменяет круг света и слабеет вместе со светочем. Радиус действия прежний.</li>
+<li><strong>Фонари —</strong> Перед первой волной мерцают и гаснут.</li>
+<li><strong>Часы —</strong> Добавлена анимация перекидных цифр.</li>
+<li><strong>Черепа волн —</strong> Добавлены анимации индикаторов волн.</li>
+<li><strong>Направление нападения —</strong> Добавлена стрелка со стороны атаки.</li>
+<li><strong>Порталы —</strong> Добавлена анимация поля у обоих порталов.</li>
+<li><strong>Вход в портал —</strong> Охотники плавно растворяются при входе.</li>
+<li>Подбор опыта ускорен: радиус притяжения <strong>96 → 120 пикс</strong>, задержка <strong>0,35 → 0,12 с</strong>. Сфера долетает до охотника и собирается при контакте.</li>
+<li>Уменьшены панели охотников, выровнены портреты, полосы здоровья стали зелёными и плавными.</li>
+<li>Добавлены подсказки у сундуков, обновлены шкалы ремонта и поднятия союзника.</li>
+<li>Убрана устаревшая подсказка у выхода.</li>
+<li>У павшего охотника отображаются <strong>0 HP</strong>, серый портрет и отдельный череп. Отключённый игрок остаётся на панели отряда.</li>
+<li>В настройках музыка и реплики получили отдельную громкость.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li>Сестра сначала наводит пистолет. После лечения или разрыва нить полностью втягивается, затем она наводится на следующего. Себя лечит последней.</li>
+<li><strong>Атака на ходу —</strong> Ноги продолжают шагать, пока верх тела сохраняет позу атаки.</li>
+<li><strong>Прерывание действий —</strong> Автоатака не обрывает поднятие фонаря или освящение.</li>
+<li>Добавлены движущиеся поверхности порталов и плавное растворение охотника вместе с кругом и тенью.</li>
+<li>У лагеря появился отдельный тёмный фон для возвращения, на котором проступают красные глаза приближающихся фигур.</li>
+<li>Добавлены плечевые портреты четырёх охотников, череп павшего, анимированные сферы опыта и разные черепа для трёх волн.</li>
+<li>Завершённая волна отмечается анимированным перечёркиванием.</li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-6-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-6-priest" data-entity="priest" aria-labelledby="preview-6-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-priest.webp"><img src="assets/history/actors/atlas-v6-priest.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Ходьба —</strong> Добавлены шестикадровые наборы спереди, сзади и сбоку.</li>
+<li><strong>Взаимодействие —</strong> Добавлены шестикадровые наборы в трёх направлениях.</li>
+<li><strong>Падение —</strong> Добавлена отдельная анимация.</li>
+<li><strong>Волна кадила —</strong> Золотистая вуаль расходится от кадила по мере нанесения урона.</li>
+<li><strong>Дым —</strong> Выходит от видимого кадила.</li>
+</ul>
+<h5>Освящение</h5>
+<ul>
+<li><strong>Защита союзников —</strong> Обновлён визуальный эффект.</li>
+<li><strong>Поза освящения —</strong> Добавлены кадры поднятия кадила, удержания и возврата в стойку.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-sister" data-entity="sister" aria-labelledby="preview-6-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-sister.webp"><img src="assets/history/actors/atlas-v6-sister.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Спрайт —</strong> Обновлён облик с пилой и медицинским пистолетом.</li>
+<li><strong>Ходьба —</strong> По 6 кадров спереди, сзади и сбоку.</li>
+<li><strong>Взмах пилой —</strong> По 6 кадров атаки в каждом из трёх направлений.</li>
+<li><strong>Попадание —</strong> Добавлена отдача тела от удара. По 6 кадров в каждом из трёх направлений.</li>
+<li><strong>Падение —</strong> Добавлено падение на бок. По 6 кадров в каждом из трёх направлений.</li>
+<li><strong>Ремонт светоча —</strong> Добавлен жест свободной рукой. По 6 кадров в каждом из трёх направлений.</li>
+<li><strong>Свечение пилы —</strong> Добавлены подсветка лезвия и голубая вуаль в месте контакта.</li>
+</ul>
+<h5>Помощь сестры</h5>
+<ul>
+<li>Лечит раненых по очереди, до 35 HP за 1,4 с на цель.</li>
+<li>Урон получателю прерывает оставшееся лечение.</li>
+<li>За применение можно поднять одного павшего союзника.</li>
+<li><strong>Наведение пистолета —</strong> По 6 кадров в каждом из трёх направлений.</li>
+<li><strong>Лечебная нить —</strong> Втягивается после выстрела до опускания пистолета.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-mage" data-entity="mage" aria-labelledby="preview-6-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-mage.webp"><img src="assets/history/actors/atlas-v6-mage.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Скорость снаряда —</strong> 630 → 300 пикс/с.</li>
+<li><strong>Подготовка сгустка —</strong> 0,14 с до вылета снаряда.</li>
+<li><strong>Ходьба —</strong> Обновлены кадры движения с посохом.</li>
+<li><strong>Удар посохом —</strong> Обновлены кадры атаки.</li>
+<li><strong>Взаимодействие —</strong> Добавлены шестикадровые жесты в трёх направлениях.</li>
+<li><strong>Падение —</strong> Добавлена отдельная анимация.</li>
+<li><strong>Полёт сгустка —</strong> Сгусток вылетает от посоха после подготовки и пульсирует в полёте.</li>
+<li><strong>Попадание сгустка —</strong> В месте попадания появляется вспышка.</li>
+</ul>
+<h5>Печать</h5>
+<ul>
+<li><strong>Применение печати —</strong> Добавлены шестикадровые жесты в трёх направлениях.</li>
+<li><strong>Печать на земле —</strong> Добавлены вращающиеся линии.</li>
+<li><strong>Замедление —</strong> У ног врагов появляется эффект печати.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-guard" data-entity="guard" aria-labelledby="preview-6-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-guard.webp"><img src="assets/history/actors/atlas-v6-guard.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-guard-title">Дозорный</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Ходьба —</strong> Добавлены шестикадровые шаги в трёх направлениях.</li>
+<li><strong>Взмах палашом —</strong> Добавлены шестикадровые атаки в трёх направлениях.</li>
+<li><strong>Падение —</strong> Добавлена отдельная шестикадровая анимация.</li>
+</ul>
+<h5>Провокация фонаря</h5>
+<ul>
+<li><strong>Провокация — </strong>Заменяет направленный толчок. Обычные враги в радиусе 125 пикс переключаются на Дозорного при прямой видимости.</li>
+<li><strong>Снижение урона — </strong>90% в течение 3 с.</li>
+<li><strong>Иммунитет — </strong>Босс, оборотень и мимик невосприимчивы к провокации.</li>
+<li><strong>Поднятие фонаря —</strong> Добавлен отдельный жест.</li>
+<li><strong>Свет фонаря —</strong> Следует за стеклом.</li>
+<li><strong>Барьер —</strong> Вращается вокруг охотника.</li>
+<li><strong>Провокация —</strong> Глаза спровоцированных врагов загораются.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="preview-6-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-6-zombie" data-entity="zombie" aria-labelledby="preview-6-zombie-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-zombie.webp"><img src="assets/history/actors/atlas-v6-zombie.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-zombie-title">Зомби</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Ходьба —</strong> 2 → 6 кадров. При остановке шаги прекращаются.</li>
+<li><strong>Падение —</strong> Новая анимация из 2 кадров с затуханием в течение 0,7 с.</li>
+<li><strong>Свечение глаз —</strong> Красное или золотое свечение остаётся на глазах при атаке. В профиль виден один глаз.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li><strong>Кадры атаки —</strong> Новая анимация из 6 кадров.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-ghost" data-entity="ghost" aria-labelledby="preview-6-ghost-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-ghost.webp"><img src="assets/history/actors/atlas-v6-ghost.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-ghost-title">Призрак</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Парение —</strong> Добавлено 6 фаз. Анимация продолжается на месте.</li>
+<li><strong>Исчезновение —</strong> Добавлено 2 кадра.</li>
+<li><strong>Тёмный силуэт —</strong> Обновлено краткое появление у границы света при высокой угрозе.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li><strong>Кадры атаки —</strong> Добавлено 6 фаз.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-rat" data-entity="rat" aria-labelledby="preview-6-rat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-rat.webp"><img src="assets/history/actors/atlas-v6-rat.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-rat-title">Крыса</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Бег —</strong> 2 → 6 кадров. При остановке крыса перестаёт перебирать лапами.</li>
+<li><strong>Падение —</strong> Новая анимация из 2 кадров.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li><strong>Кадры атаки —</strong> Новая анимация из 6 кадров.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-bat" data-entity="bat" aria-labelledby="preview-6-bat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-bat.webp"><img src="assets/history/actors/atlas-v6-bat.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-bat-title">Летучая мышь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Парение —</strong> Добавлено 6 кадров.</li>
+<li><strong>Падение —</strong> Добавлено 2 кадра.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Подготовка —</strong> Добавлено 2 кадра.</li>
+<li><strong>Рывок —</strong> Добавлено 2 кадра броска.</li>
+<li><strong>Восстановление —</strong> Добавлено 2 кадра после рывка.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-werewolf" data-entity="werewolf" aria-labelledby="preview-6-werewolf-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-werewolf.webp"><img src="assets/history/actors/atlas-v6-werewolf.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-werewolf-title">Оборотень</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Движение —</strong> Добавлено 6 кадров.</li>
+<li><strong>Падение —</strong> Добавлено 2 кадра.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Присед —</strong> Добавлено 2 кадра подготовки к броску.</li>
+<li><strong>Рывок —</strong> Добавлено 2 кадра.</li>
+<li><strong>Выход из рывка —</strong> Добавлено 2 кадра.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-mimic" data-entity="mimic" aria-labelledby="preview-6-mimic-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-mimic.webp"><img src="assets/history/actors/atlas-v6-mimic.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-mimic-title">Мимик</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>После активации мимика на месте исходного сундука не остаётся дубликат. Исправлено размещение пугающих событий поверх препятствий.</li>
+<li><strong>Ходьба —</strong> Добавлено 6 кадров.</li>
+<li><strong>Падение —</strong> Добавлено 2 кадра.</li>
+</ul>
+<h5>Захват</h5>
+<ul>
+<li><strong>Раскрытие пасти —</strong> Добавлены новые позы постепенного раскрытия.</li>
+<li><strong>Перетаскивание —</strong> Добавлены позы движения с захваченным охотником.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-6-boss" data-entity="boss" aria-labelledby="preview-6-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v6-boss.webp"><img src="assets/history/actors/atlas-v6-boss.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-6-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Движение —</strong> Добавлено 6 фаз.</li>
+<li><strong>Падение —</strong> Добавлено 2 кадра.</li>
+</ul>
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Подготовка —</strong> Добавлено четыре положения рук.</li>
+<li><strong>Удар —</strong> Добавлена отдельная поза.</li>
+<li><strong>Восстановление —</strong> Добавлена отдельная поза после удара.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group" id="preview-6-fixes">
+<h3>Исправления</h3>
+<ul>
+<li>Убраны скачки направления спрайтов при остановке.</li>
+<li>В LAN сглаживаются движение в лагере, анимации, перемещение находок и эффекты, которые раньше обновлялись рывками.</li>
+<li>Исправлено размещение пугающих событий поверх препятствий.</li>
+<li>Охотники плавнее обходят углы и препятствия в лагере и депо. У постамента светоча появилась коллизия, наградной сундук отодвинут от основания.</li>
+<li>Фонари мерцают независимо и сохраняют видимый корпус. Глаза зомби остаются на лице в анимации атаки.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-6-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-6.webp"><img src="assets/history/preview-6.gif" width="640" height="360" loading="lazy" decoding="async" alt="Бой и возвращение в тёмный лагерь"></picture><figcaption>Бой и возвращение в тёмный лагерь <a class="patch-motion-link" href="assets/history/preview-6.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-5" aria-labelledby="preview-5-title">
+<header class="patch-version"><p><span>Preview 5</span> <time datetime="2026-11-14">14 ноября 2026</time></p><h2 id="preview-5-title" tabindex="-1">Огонь и сталь</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-5-general">Общее</a> <a href="#preview-5-items">Предметы</a> <a href="#preview-5-sprites">Герои</a> <a href="#preview-5-fixes">Исправления</a> <a href="#preview-5-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-5-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Депо и подача</h4>
+<ul>
+<li>Опыт притягивается к ближайшему доступному герою с расстояния до <strong>96 пикс</strong> после задержки <strong>0,35 с</strong>.</li>
+<li>Светоч тускнеет при потере здоровья. На врагах, которых задевает его свет, появляется анимация пламени. Добавлены тени и локальное освещение.</li>
+<li>Ремонт возвращает яркость, не меняя радиус действия.</li>
+<li>При критическом HP остаётся слабое свечение.</li>
+<li>Аварийная вспышка имеет приоритет над миганием от заряда босса.</li>
+<li><strong>Скример у сундука —</strong> Призрак теперь бросается в сторону охотника.</li>
+<li><strong>Силуэты —</strong> При высокой угрозе появляются за кругом света.</li>
+<li><strong>Урон —</strong> Скример и силуэты не наносят урон.</li>
+<li>В главном меню зажигается фонарь перед появлением кнопок. В настройках появилась общая громкость с сохранением между запусками.</li>
+<li>Подтверждение во время зажигания пропускает вступление. Настройки громкости работают с клавиатуры и геймпада.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li>Подтверждение выбора героя в лагере запускает его реплику. Озвучка входит в сборку Windows.</li>
+<li><strong>Маг и бой вблизи.</strong> Анимация попадания привязана к прилёту снаряда или контакту взмаха.</li>
+<li>Подписи и круги охотников выровнены по ногам, а при движении вверх и вниз рисунок оружия не зеркалится вслед за предыдущим направлением.</li>
+<li><strong>Нечисть и свет.</strong> На врагах в круге светоча проигрывается <strong>8-кадровое</strong> бледно-золотое пламя.</li>
+<li>Вышедший из света или погибший враг перестаёт гореть.</li>
+<li>Это изображение урона светоча.</li>
+<li><strong>Предметы и окружение.</strong> Сохранены более чёткие пиксели на спрайтах героев и врагов, вагонов, сундуков и груза.</li>
+<li>В меню появились затемнённая иллюстрация фонаря и отдельная петля живого пламени.</li>
+</ul>
+<ul>
+<li><strong>Длительность скримера —</strong> 0,6 → 0,4 с.</li>
+</ul>
+</section>
+<section class="patch-group" id="preview-5-items">
+<h3>Предметы</h3>
+<ul class="patch-item-list">
+<li class="patch-item-change"><h4>Палаш и фонарь</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Заменили меч и щит в стартовом снаряжении.</li>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 70 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,7 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Цепная молния</h4><p class="patch-change-kind">Изменён</p><ul>
+<li>Каждый перескок теперь выполняется летящим снарядом. Урон наносится в момент попадания.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Кадило</h4><p class="patch-change-kind">Изменён</p><ul>
+<li><strong>Урон —</strong> 18 → 12.</li>
+<li><strong>Интервал атаки —</strong> 0,7 → 1,25 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Пронизывающий свет</h4><p class="patch-change-kind">Изменён</p><ul>
+<li><strong>Урон —</strong> 24 → 16.</li>
+<li><strong>Интервал атаки —</strong> 1 → 1,35 с.</li>
+<li>Атака распространяется волной в секторе 40° и наносит урон по мере продвижения.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Быстрая волна</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Заменила «Скоростные выстрелы».</li>
+<li><strong>Урон —</strong> 10.</li>
+<li><strong>Дальность —</strong> 170 пикс.</li>
+<li><strong>Интервал атаки —</strong> 1,05 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Меч и щит</h4><p class="patch-change-kind">Удалён</p></li>
+<li class="patch-item-change"><h4>Скоростные выстрелы</h4><p class="patch-change-kind">Удалён</p></li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-5-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-5-priest" data-entity="priest" aria-labelledby="preview-5-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v5-priest.webp"><img src="assets/history/actors/atlas-v5-priest.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-5-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Урон за удар —</strong> 18 → 12</li>
+<li><strong>Интервал атаки —</strong> 0,7 → 1,25 с</li>
+<li><strong>Атлас —</strong> Добавлено 32 кадра.</li>
+<li><strong>Ходьба —</strong> Обновлена спереди, сзади и сбоку.</li>
+<li><strong>Атака —</strong> Добавлены кадры взмаха кадилом.</li>
+<li><strong>Взаимодействие —</strong> Добавлены кадры взаимодействия с объектами.</li>
+<li><strong>Попадание —</strong> Добавлена реакция на урон.</li>
+<li><strong>Поднятие союзника —</strong> Добавлены отдельные кадры.</li>
+<li><strong>Дым кадила —</strong> Следует за видимой позой охотника.</li>
+</ul>
+<h5>Освящение</h5>
+<ul>
+<li><strong>Поза освящения —</strong> Добавлены отдельные кадры применения.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-5-mage" data-entity="mage" aria-labelledby="preview-5-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v5-mage.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-5-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Сгусток посоха —</strong> Летит к цели и наносит урон при попадании. Раньше урон наносился сразу.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-5-guard" data-entity="guard" aria-labelledby="preview-5-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v5-guard.webp"><img src="assets/history/actors/atlas-v5-guard.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-5-guard-title">Дозорный</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>Рыцарь стал Дозорным. Меч и щит заменены палашом и фонарём.</li>
+<li><strong>Атлас —</strong> Добавлен спрайт Дозорного с палашом и фонарём.</li>
+<li><strong>Ходьба —</strong> Добавлены новые кадры движения.</li>
+<li><strong>Мерцание фонаря —</strong> Стекло меняет яркость в четырёх фазах независимо от ходьбы.</li>
+<li><strong>Подсветка —</strong> Свет исходит от стекла фонаря.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group" id="preview-5-fixes">
+<h3>Исправления</h3>
+<ul>
+<li>При движении вверх и вниз охотник сохраняет правильную сторону спрайта. Круги и подписи игроков теперь центрируются по ногам.</li>
+<li>Атаки наносят урон в момент контакта. Волна Священника поражает ближних врагов раньше дальних, каждого один раз.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-5-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-5.webp"><img src="assets/history/preview-5.gif" width="640" height="360" loading="lazy" decoding="async" alt="Зажигание фонаря в меню и бой"></picture><figcaption>Зажигание фонаря в меню и бой <a class="patch-motion-link" href="assets/history/preview-5.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-4" aria-labelledby="preview-4-title">
+<header class="patch-version"><p><span>Preview 4</span> <time datetime="2026-11-14">14 ноября 2026</time></p><h2 id="preview-4-title" tabindex="-1">Управление и связь</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-4-general">Общее</a> <a href="#preview-4-enemies">Нечисть и боссы</a> <a href="#preview-4-fixes">Исправления</a> <a href="#preview-4-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-4-general">
+<h3>Общие изменения</h3>
+
+</section>
+<section class="patch-group patch-entity-section" id="preview-4-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-4-rat" data-entity="rat" aria-labelledby="preview-4-rat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v3-rat.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-4-rat-title">Крыса</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Разворот —</strong> Направление спрайта передаётся от хоста клиентам LAN.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-4-bat" data-entity="bat" aria-labelledby="preview-4-bat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v3-bat.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-4-bat-title">Летучая мышь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Разворот —</strong> Направление спрайта передаётся от хоста клиентам LAN.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Восстановление —</strong> После броска используется поза подготовки.</li>
+<li><strong>Предупреждение —</strong> При восстановлении видно отдельное кольцо под врагом.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-4-werewolf" data-entity="werewolf" aria-labelledby="preview-4-werewolf-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v3-werewolf.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-4-werewolf-title">Оборотень</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Разворот —</strong> Направление спрайта передаётся от хоста клиентам LAN.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Восстановление —</strong> После броска используется поза подготовки.</li>
+<li><strong>Предупреждение —</strong> При восстановлении видно отдельное кольцо под врагом.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-4-mimic" data-entity="mimic" aria-labelledby="preview-4-mimic-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v3-mimic.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-4-mimic-title">Мимик</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Разворот —</strong> Направление спрайта передаётся от хоста клиентам LAN.</li>
+</ul>
+<h5>Захват</h5>
+<ul>
+<li><strong>Привязь —</strong> В LAN плавно следует за мимиком и пленником и исчезает при освобождении.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-4-boss" data-entity="boss" aria-labelledby="preview-4-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v1-boss.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-4-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Оглушение —</strong> Сбитый заряд отмечен кольцом над фигурой.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group" id="preview-4-fixes">
+<h3>Исправления</h3>
+<ul>
+<li><strong>LAN.</strong> Клиенты снова видят направление движения врагов и привязь пленника мимика. При освобождении привязь исчезает.</li>
+<li><strong>LAN.</strong> Ошибка создания комнаты и неверный IP оставляют доступными повторную попытку и выход назад. Сообщение сбрасывается при переходе между экранами.</li>
+<li>Не назначенный игроку геймпад больше не подтверждает действия в паузе.</li>
+<li>«Продолжить» после результата закрывает паузу и сохраняет результат, возврат в лагерь доступен отдельным действием.</li>
+<li>Уточнены подсказки возврата управления и индикаторы критического состояния светоча. При выходе останавливается звук.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-4-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-4.webp"><img src="assets/history/preview-4.gif" width="640" height="360" loading="lazy" decoding="async" alt="Экран подключения и бой в депо"></picture><figcaption>Экран подключения и бой в депо <a class="patch-motion-link" href="assets/history/preview-4.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-3" aria-labelledby="preview-3-title">
+<header class="patch-version"><p><span>Preview 3</span> <time datetime="2026-11-11">11 ноября 2026</time></p><h2 id="preview-3-title" tabindex="-1">Три волны</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-3-general">Общее</a> <a href="#preview-3-sprites">Герои</a> <a href="#preview-3-enemies">Нечисть и боссы</a> <a href="#preview-3-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-3-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Вылазка</h4>
+<ul>
+<li>Одна оборона заменена тремя волнами по <strong>45 / 55 / 65 с</strong> с двумя передышками по <strong>15 с</strong>.</li>
+<li>Направление следующей волны видно заранее, между волнами можно чинить светоч и поднимать союзников.</li>
+<li>Во второй волне появляется оборотень, в третьей — босс. Для завершения волны нужно пережить её расписание и добить оставшуюся нечисть.</li>
+<li>Три волны используют три разные стороны арены.</li>
+<li>Перед первой волной есть <strong>5 с</strong> предупреждения, следующие направления объявляются в последние <strong>5 с</strong> каждой передышки.</li>
+<li>Вылазки получают разные случайные раскладки. Во время поиска можно сражаться, применять способности и спасать союзников до первой волны.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Сундуки</h4>
+<ul>
+<li>Два из шести сундуков содержат разные скрытые события.</li>
+<li><strong>Скример — </strong>Пугает охотника.</li>
+<li><strong>Проклятие — </strong>Снижает урон на 20% на 20 с.</li>
+<li><strong>Потеря времени — </strong>Отнимает 10 с поиска.</li>
+<li><strong>Мимик — </strong>Выходит из сундука.</li>
+<li>Потеря времени отменяет незавершённые открытия, а сундуки, которые успели открыть в тот же момент, выдают добычу.</li>
+<li>Мимик, оставшийся в живых, продолжает бой в обороне.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li>Профиль зеркалится для левой стороны. LAN сглаживает перемещение и использует переданные состояния действий.</li>
+</ul>
+<ul>
+<li><strong>Скример у сундука —</strong> Призрачная фигура поднимается на 24 пикс и исчезает за 0,6 с.</li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-3-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-3-priest" data-entity="priest" aria-labelledby="preview-3-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-priest.webp"><img src="assets/history/actors/atlas-v3-priest.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Атлас —</strong> Добавлено 16 поз.</li>
+<li><strong>Стойка —</strong> Добавлены направления спереди, сзади и сбоку.</li>
+<li><strong>Ходьба —</strong> Добавлены шаги спереди, сзади и сбоку.</li>
+<li><strong>Взмах кадилом —</strong> Добавлены направленные взмахи.</li>
+</ul>
+<h5>Освящение</h5>
+<ul>
+<li><strong>Поза освящения —</strong> Добавлен отдельный кадр способности.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-3-sister" data-entity="sister" aria-labelledby="preview-3-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-sister.webp"><img src="assets/history/actors/atlas-v3-sister.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Атлас —</strong> Добавлено 16 поз.</li>
+<li><strong>Ходьба —</strong> Добавлены кадры в трёх ракурсах.</li>
+<li><strong>Взмах пилой —</strong> Добавлена отдельная поза атаки.</li>
+<li><strong>Действие —</strong> Добавлена отдельная поза применения.</li>
+<li><strong>Попадание —</strong> Добавлен кадр реакции на удар.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-3-mage" data-entity="mage" aria-labelledby="preview-3-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-mage.webp"><img src="assets/history/actors/atlas-v3-mage.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Атлас —</strong> Добавлено 16 поз в разных ракурсах.</li>
+<li><strong>Удар посохом —</strong> Добавлены отдельные кадры атаки.</li>
+</ul>
+<h5>Печать</h5>
+<ul>
+<li><strong>Применение печати —</strong> Добавлены отдельные кадры применения.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-3-guard" data-entity="guard" aria-labelledby="preview-3-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-guard.webp"><img src="assets/history/actors/atlas-v3-guard.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-guard-title">Рыцарь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Атлас —</strong> Добавлено 16 поз Рыцаря с мечом и щитом.</li>
+<li><strong>Ходьба —</strong> Добавлены направленные шаги.</li>
+<li><strong>Атака —</strong> Добавлена отдельная поза.</li>
+<li><strong>Попадание —</strong> Добавлен кадр реакции на удар.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="preview-3-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-3-rat" data-entity="rat" aria-labelledby="preview-3-rat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-rat.webp"><img src="assets/history/actors/atlas-v3-rat.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-rat-title">Крыса</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Здоровье —</strong> 16 HP</li>
+<li><strong>Скорость движения —</strong> 94 пикс/с</li>
+<li><strong>Контакт с героем —</strong> 4 HP/с</li>
+<li><strong>Контакт со светочем —</strong> 3 HP/с</li>
+<li><strong>Опыт за гибель —</strong> 1</li>
+<li><strong>Спрайт —</strong> Добавлен спрайт крысы.</li>
+<li><strong>Бег —</strong> Новая анимация из двух кадров.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li>Крысы приходят стаями и предпочитают охотников за кругом света.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-3-bat" data-entity="bat" aria-labelledby="preview-3-bat-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-bat.webp"><img src="assets/history/actors/atlas-v3-bat.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-bat-title">Летучая мышь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Здоровье —</strong> 20 HP</li>
+<li><strong>Скорость движения —</strong> 88 пикс/с</li>
+<li><strong>Опыт за гибель —</strong> 2</li>
+<li><strong>Спрайт —</strong> Добавлен спрайт летучей мыши.</li>
+<li><strong>Полёт —</strong> Добавлены две позы полёта.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Рывок по герою —</strong> 12</li>
+<li><strong>Рывок по светочу —</strong> 10</li>
+<li>Кружит у светоча и выбирает дальнюю от него цель.</li>
+<li>Предупреждает за 0,65 с при прямой видимости и дистанции меньше 260 пикс. Рывок длится 0,45 с со скоростью 270 пикс/с без замедлений.</li>
+<li>Восстановление — 0,7 с. Таймер повторной атаки 3,5 с отсчитывается в фазе поиска цели.</li>
+<li><strong>Подготовка к броску —</strong> Добавлена отдельная поза.</li>
+<li><strong>Рывок —</strong> Добавлена отдельная поза броска.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-3-werewolf" data-entity="werewolf" aria-labelledby="preview-3-werewolf-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-werewolf.webp"><img src="assets/history/actors/atlas-v3-werewolf.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-werewolf-title">Оборотень</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Базовое здоровье —</strong> 240 HP</li>
+<li><strong>Скорость движения —</strong> 67 пикс/с</li>
+<li><strong>Опыт за гибель —</strong> 8</li>
+<li><strong>Спрайт —</strong> Добавлен спрайт оборотня.</li>
+<li><strong>Ходьба —</strong> Добавлены две ходовые позы.</li>
+</ul>
+<h5>Рывок</h5>
+<ul>
+<li><strong>Рывок по герою —</strong> 24</li>
+<li><strong>Рывок по светочу —</strong> 20</li>
+<li>Выбирает охотника, который дальше от света и союзников.</li>
+<li>Предупреждает за 0,85 с при прямой видимости и дистанции меньше 260 пикс. Рывок длится 0,55 с со скоростью 310 пикс/с без замедлений.</li>
+<li>Восстановление — 0,7 с после попадания, 1,2 с после промаха.</li>
+<li>Таймер повторной атаки 4,5 с отсчитывается в фазе поиска цели.</li>
+<li>Аварийная вспышка оглушает оборотня на 2 с.</li>
+<li><strong>Подготовка к броску —</strong> Добавлен присед.</li>
+<li><strong>Рывок —</strong> Добавлена вытянутая поза броска.</li>
+</ul>
+<p class="patch-detail-note">Базовое здоровье растёт с размером отряда.</p>
+</div></section>
+<section class="patch-entity" id="preview-3-mimic" data-entity="mimic" aria-labelledby="preview-3-mimic-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v3-mimic.webp"><img src="assets/history/actors/atlas-v3-mimic.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-3-mimic-title">Мимик</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Базовое здоровье —</strong> 120 HP</li>
+<li><strong>Скорость движения —</strong> 70 пикс/с</li>
+<li><strong>Опыт за гибель —</strong> 4</li>
+<li><strong>Спрайт —</strong> Добавлен сундук с пастью и лапами.</li>
+</ul>
+<h5>Захват</h5>
+<ul>
+<li><strong>Урон пленнику —</strong> 5 HP/с</li>
+<li><strong>Подготовка — </strong>0,75 с после раскрытия сундука.</li>
+<li><strong>Захват — </strong>Хватает одного охотника и тащит его.</li>
+<li><strong>Освобождение — </strong>Отпустить взаимодействие и удерживать снова 2 с.</li>
+<li><strong>Помощь отряда — </strong>30 урона по мимику за текущий захват освобождают пленника.</li>
+<li><strong>Гибель мимика — </strong>Освобождает пленника и оставляет добычу из сундука.</li>
+<li><strong>Защита после побега — </strong>3 с.</li>
+<li><strong>Раскрытие пасти —</strong> Добавлены кадры раскрытия.</li>
+<li><strong>Перетаскивание —</strong> Добавлены кадры движения с пленником.</li>
+<li><strong>Привязь —</strong> Между мимиком и пленником видна связь.</li>
+</ul>
+<p class="patch-detail-note">Базовое здоровье растёт с размером отряда.</p>
+<div class="patch-entity-clips">
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-3-mimic.webp"><img src="assets/history/preview-3-mimic.gif" width="512" height="256" loading="lazy" decoding="async" alt="Мимик хватает и тащит охотника, который вырывается"></picture><figcaption>Захват в Preview 3. Мимик тащит охотника. Чтобы вырваться, игрок отпускает E и снова удерживает её. <a class="patch-motion-link" href="assets/history/preview-3-mimic.gif">Открыть анимацию</a></figcaption></figure>
+</div>
+</div></section>
+</section>
+<section class="patch-group patch-gameplay" id="preview-3-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-3.webp"><img src="assets/history/preview-3.gif" width="640" height="360" loading="lazy" decoding="async" alt="Крыса, летучая мышь и оборотень в бою"></picture><figcaption>Крыса, летучая мышь и оборотень в бою <a class="patch-motion-link" href="assets/history/preview-3.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-2" aria-labelledby="preview-2-title">
+<header class="patch-version"><p><span>Preview 2</span> <time datetime="2026-11-11">11 ноября 2026</time></p><h2 id="preview-2-title" tabindex="-1">Отряд по сети</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-2-general">Общее</a> <a href="#preview-2-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-2-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Кооператив</h4>
+<ul>
+<li>Добавлена игра по LAN для <strong>2–4 ПК</strong> с прямым подключением по IP, по одному охотнику на компьютер. Адрес хоста виден в меню паузы.</li>
+<li>В LAN появилась общая пауза. При выходе клиента вылазка прерывается и отряд возвращается в лагерь. При выходе хоста клиент возвращается к подключению.</li>
+<li>Подключение друга оставляет отряд в лагере.</li>
+<li>Войти в уже начатую вылазку нельзя.</li>
+<li>Потеря фокуса очищает удерживаемые кнопки у одного игрока и не ставит на паузу друга.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Лагерь, управление и звук</h4>
+<ul>
+<li>Между главным меню и лагерем появился выбор режима.</li>
+<li>У портала и сундуков добавлены шкалы взаимодействия.</li>
+<li>Удержание кнопки у сундука блокирует движение до отпускания.</li>
+<li>Переход через портал начинается при входе всей команды, затем показывается название района. Таймер запускается после прибытия.</li>
+<li>Удержание движения больше не проводит охотника сквозь портал при телепортации.</li>
+<li>Только окно подтверждения на том ПК, который запросил выход, блокирует управление в лагере.</li>
+<li>Нижняя дорога возвращает в главное меню после подтверждения. Подсказки меняются под клавиатуру или геймпад. Добавлена музыка.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li><strong>Лагерь.</strong> Добавлена иллюстрация с палаткой, центральным светом и порталом с более высокой точки обзора.</li>
+<li><strong>Главное меню.</strong> Добавлен отдельный фон с фонарём. Название и кнопки рисуются поверх него интерфейсом.</li>
+<li><strong>Портал.</strong> При входе охотник уменьшается, приподнимается и растворяется в течение <strong>0,6 с</strong>. Затем появляется название депо и общий переход на арену.</li>
+<li><strong>Взаимодействие.</strong> Над героем заполняется полоска открытия портала или сундука. В LAN её видят и на клиенте.</li>
+</ul>
+<ul>
+<li><strong>Открытие портала —</strong> Внутри арки появляются шесть движущихся контуров.</li>
+</ul>
+</section>
+<section class="patch-group patch-gameplay" id="preview-2-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-2.webp"><img src="assets/history/preview-2.gif" width="640" height="360" loading="lazy" decoding="async" alt="Экран LAN, лагерь и вылазка"></picture><figcaption>Экран LAN, лагерь и вылазка <a class="patch-motion-link" href="assets/history/preview-2.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="preview-1" aria-labelledby="preview-1-title">
+<header class="patch-version"><p><span>Preview 1</span> <time datetime="2026-11-11">11 ноября 2026</time></p><h2 id="preview-1-title" tabindex="-1">Ночная вылазка</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#preview-1-general">Общее</a> <a href="#preview-1-items">Предметы</a> <a href="#preview-1-sprites">Герои</a> <a href="#preview-1-enemies">Нечисть и боссы</a> <a href="#preview-1-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="preview-1-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>Первая сборка</h4>
+<ul>
+<li>Локальная игра для <strong>1–4 охотников</strong> на общем экране.</li>
+<li>Священник, Чумная сестра, Маг и Рыцарь получили разные оружие и способности.</li>
+<li>Героя выбирают у палатки, в портал входят вместе.</li>
+<li>Вылазка в ночное депо. <strong>120 с</strong> на поиск в шести сундуках, <strong>90 с</strong> на появление обычной нечисти во время обороны и босс после <strong>30 с</strong> обороны.</li>
+<li>После победы открывается наградной сундук и выход.</li>
+<li>Светоч имеет <strong>500 HP</strong>. Его можно чинить.</li>
+<li>При первом угасании он даёт вспышку и остаётся с <strong>1 HP</strong>, второе угасание завершает вылазку.</li>
+<li>Охотники могут поднимать павших союзников.</li>
+<li>Добавлены режимы автоатаки и атаки по удержанию, панели участников, меню «Играть» и «Выход», тёмный лагерь и пиксельные спрайты.</li>
+<li>Светоч пульсирует, пока босс заряжает атаку. Пульсация прекращается при прерывании, смерти босса или выходе из обороны и замирает во время паузы.</li>
+</ul>
+</section>
+<section class="patch-topic"><h4>Добыча и опыт</h4>
+<ul>
+<li>В сундуках оружие, артефакты и материалы.</li>
+<li>У каждого охотника есть два альтернативных варианта оружия и одно место под артефакт.</li>
+<li>Выбор снаряжения подтверждается отдельно для каждого игрока.</li>
+<li>В окне артефакта показаны старый и новый бонусы. Удержание кнопки после подтверждения не открывает окно повторно и не меняет артефакт обратно.</li>
+<li>Каждые <strong>10 опыта</strong>, сданного у светоча, дают отряду уровень. Уровень добавляет <strong>10 максимального HP</strong> и <strong>10% базового урона</strong>.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li><strong>Депо и лагерь.</strong> Появились фон пола, спрайты вагонов, сундуков, грузов и фонарей, ночной лагерь и контактные тени.</li>
+<li>У сундука отдельные закрытое и открытое состояния.</li>
+</ul>
+<ul>
+<li><strong>Применение способности —</strong> Вокруг охотника появляется круг на 0,3 с.</li>
+</ul>
+</section>
+<section class="patch-group" id="preview-1-items">
+<h3>Предметы</h3>
+<ul class="patch-item-list">
+<li class="patch-item-change"><h4>Меч и щит</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Стартовое оружие Рыцаря.</li>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 70 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,7 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Сильный удар</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 30.</li>
+<li><strong>Дальность —</strong> 60 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,9 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Широкая атака</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 22.</li>
+<li><strong>Дальность —</strong> 95 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,75 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Посох</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Стартовое оружие.</li>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 205 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,7 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Мощный сгусток</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 32.</li>
+<li><strong>Дальность —</strong> 205 пикс.</li>
+<li><strong>Интервал атаки —</strong> 1 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Цепная молния</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 205 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,8 с.</li>
+<li>До двух перескоков после первого попадания.</li>
+<li>Дальность перескока — до 105 пикс при прямой видимости.</li>
+<li>Урон каждого перескока — 70% урона первого попадания.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Кадило</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Стартовое оружие.</li>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 170 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,7 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Пронизывающий свет</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 24.</li>
+<li><strong>Дальность —</strong> 170 пикс.</li>
+<li><strong>Интервал атаки —</strong> 1 с.</li>
+<li>Поражает нескольких врагов на линии атаки при прямой видимости.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Скоростные выстрелы</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Оружие из сундуков.</li>
+<li><strong>Урон —</strong> 14.</li>
+<li><strong>Дальность —</strong> 170 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,4 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Костяная пила</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Стартовое оружие.</li>
+<li><strong>Урон —</strong> 18.</li>
+<li><strong>Дальность —</strong> 65 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,7 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Быстрая пила</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 14.</li>
+<li><strong>Дальность —</strong> 55 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,4 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Широкий взмах</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li><strong>Урон —</strong> 24.</li>
+<li><strong>Дальность —</strong> 85 пикс.</li>
+<li><strong>Интервал атаки —</strong> 0,9 с.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Амулет «Здоровье»</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Здоровье +20%.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Талисман силы</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Урон +20%.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Реликвия «Восстановление»</h4><p class="patch-change-kind">Новый предмет</p><ul>
+<li>Скорость ремонта светоча +25%.</li>
+</ul></li>
+<li class="patch-item-change"><h4>Материалы</h4><p class="patch-change-kind">Новая добыча</p><ul>
+<li>По 5 единиц в сундуке. Засчитываются при победе.</li>
+</ul></li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="preview-1-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="preview-1-priest" data-entity="priest" aria-labelledby="preview-1-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-priest.webp"><img src="assets/history/actors/atlas-v1-priest.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Спрайт —</strong> Добавлен отдельный пиксельный спрайт.</li>
+<li><strong>Стойка —</strong> Добавлена поза стоящего охотника.</li>
+<li><strong>Ходьба —</strong> Добавлены два сменных кадра шага.</li>
+<li><strong>Стойка со спины —</strong> Добавлена поза для лагеря.</li>
+<li><strong>Попадание —</strong> Спрайт вспыхивает при получении урона.</li>
+</ul>
+<h5>Освящение</h5>
+<ul>
+<li><strong>Новая способность.</strong> Перезарядка — 12 с.</li>
+<li>На 6 с снижает получаемый урон на 50% у себя и у союзников в радиусе 125 пикс.</li>
+<li>Призраки в том же радиусе получают на 35% больше урона от игроков в течение 6 с.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-1-sister" data-entity="sister" aria-labelledby="preview-1-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-sister.webp"><img src="assets/history/actors/atlas-v1-sister.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Спрайт —</strong> Добавлен отдельный пиксельный спрайт.</li>
+<li><strong>Стойка —</strong> Добавлена поза стоящего охотника.</li>
+<li><strong>Ходьба —</strong> Добавлены два сменных кадра шага.</li>
+<li><strong>Стойка со спины —</strong> Добавлена поза для лагеря.</li>
+<li><strong>Попадание —</strong> Спрайт вспыхивает при получении урона.</li>
+</ul>
+<h5>Помощь сестры</h5>
+<ul>
+<li><strong>Новая способность.</strong> Перезарядка — 12 с.</li>
+<li>Восстанавливает до 35 HP себе и живым союзникам в радиусе 125 пикс.</li>
+<li>Поднимает ближайшего павшего союзника в том же радиусе.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-1-mage" data-entity="mage" aria-labelledby="preview-1-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-mage.webp"><img src="assets/history/actors/atlas-v1-mage.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Дальность атаки —</strong> 170 → 205 пикс</li>
+<li><strong>Спрайт —</strong> Добавлен отдельный пиксельный спрайт.</li>
+<li><strong>Стойка —</strong> Добавлена поза стоящего охотника.</li>
+<li><strong>Ходьба —</strong> Добавлены два сменных кадра шага.</li>
+<li><strong>Стойка со спины —</strong> Добавлена поза для лагеря.</li>
+<li><strong>Попадание —</strong> Спрайт вспыхивает при получении урона.</li>
+</ul>
+<h5>Печать</h5>
+<ul>
+<li><strong>Новая способность.</strong> Перезарядка — 12 с.</li>
+<li>Ставит печать в 80 пикс перед собой. Печать действует 6 с.</li>
+<li>Движение врагов в радиусе 65 пикс замедляется на 70%.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-1-guard" data-entity="guard" aria-labelledby="preview-1-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-guard.webp"><img src="assets/history/actors/atlas-v1-guard.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-guard-title">Рыцарь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Здоровье —</strong> 100 → 140 HP</li>
+<li><strong>Дальность атаки —</strong> 65 → 70 пикс</li>
+<li><strong>Спрайт —</strong> Добавлен отдельный пиксельный спрайт.</li>
+<li><strong>Стойка —</strong> Добавлена поза стоящего охотника.</li>
+<li><strong>Ходьба —</strong> Добавлены два сменных кадра шага.</li>
+<li><strong>Стойка со спины —</strong> Добавлена поза для лагеря.</li>
+<li><strong>Попадание —</strong> Спрайт вспыхивает при получении урона.</li>
+</ul>
+<h5>Щит и натиск</h5>
+<ul>
+<li><strong>Новая способность.</strong> Перезарядка — 12 с.</li>
+<li>Щит снижает получаемый урон на 75% в течение 3 с.</li>
+<li>Отталкивает врагов перед собой на расстояние до 80 пикс. Дальность действия — 125 пикс при прямой видимости.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="preview-1-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="preview-1-zombie" data-entity="zombie" aria-labelledby="preview-1-zombie-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-zombie.webp"><img src="assets/history/actors/atlas-v1-zombie.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-zombie-title">Зомби</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>Зомби обходит препятствия.</li>
+<li><strong>Спрайт —</strong> Добавлен отдельный спрайт зомби.</li>
+<li><strong>Ходьба —</strong> Две позы сменяются с частотой 4 кадра/с.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-1-ghost" data-entity="ghost" aria-labelledby="preview-1-ghost-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-ghost.webp"><img src="assets/history/actors/atlas-v1-ghost.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-ghost-title">Призрак</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li>Призрак проходит сквозь препятствия.</li>
+<li><strong>Здоровье —</strong> 40 → 32 HP</li>
+<li><strong>Скорость движения —</strong> 52 → 60 пикс/с</li>
+<li><strong>Спрайт —</strong> Добавлен полупрозрачный спрайт призрака.</li>
+<li><strong>Парение —</strong> Добавлены две сменные позы.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="preview-1-boss" data-entity="boss" aria-labelledby="preview-1-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/actors/atlas-v1-boss.webp"><img src="assets/history/actors/atlas-v1-boss.gif" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="preview-1-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Опыт за гибель —</strong> 2 → 12</li>
+<li><strong>Спрайт —</strong> Добавлен крупный спрайт с двумя позами.</li>
+</ul>
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Поза заряда —</strong> Во время заряда босс удерживает вторую позу.</li>
+<li><strong>Направление заряда —</strong> Луч указывает на светоч.</li>
+<li><strong>Отсчёт заряда —</strong> Дуга у босса показывает оставшееся время.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-gameplay" id="preview-1-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/preview-1.webp"><img src="assets/history/preview-1.gif" width="640" height="360" loading="lazy" decoding="async" alt="Лагерь охотников и бой в депо"></picture><figcaption>Лагерь охотников и бой в депо <a class="patch-motion-link" href="assets/history/preview-1.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+
+<article class="patch-notes" id="prototype" aria-labelledby="prototype-title">
+<header class="patch-version"><p><span>До Preview</span> <time datetime="2026-11-11">11 ноября 2026</time></p><h2 id="prototype-title" tabindex="-1">Первый прототип</h2><nav class="patch-chapter-nav" aria-label="Разделы патча"><a href="#prototype-general">Общее</a> <a href="#prototype-sprites">Герои</a> <a href="#prototype-enemies">Нечисть и боссы</a> <a href="#prototype-gameplay">Геймплей</a></nav></header>
+<section class="patch-group" id="prototype-general">
+<h3>Общие изменения</h3>
+<section class="patch-topic"><h4>С чего началось</h4>
+<ul>
+<li>Одиночная арена без лагеря.</li>
+<li>Охотника выбирают стрелками, вылазка начинается по Enter.</li>
+<li>Героя, врагов и светоч показывают цветные круги, сундуки — прямоугольники.</li>
+<li>Четыре класса уже на месте: Священник, Чумная сестра, Маг и Рыцарь. Есть автоатака и атака по удержанию, способность на Q и общий таймер перезарядки <strong>12 с</strong>.</li>
+<li>Поиск длится <strong>120 с</strong>. Есть шесть сундуков, а число открытых увеличивает число врагов на обороне. Светоч начинает с <strong>500 HP</strong>.</li>
+<li>Босс с <strong>400 HP</strong> появляется через <strong>30 с</strong> обороны. После победы награду забирают у светоча и уходят через выход справа.</li>
+</ul>
+</section>
+<h5>Общие изменения графики и управления</h5>
+<ul>
+<li><strong>Персонажи.</strong> Охотник, зомби, призрак и босс показаны цветными кругами. Движение видно по перемещению кругов, у них ещё нет нарисованных фаз ходьбы и атаки.</li>
+<li><strong>Объекты и атаки.</strong> Сундуки обозначены прямоугольниками, зона светоча — полупрозрачным кругом. Заряд босса показывает красная линия до светоча.</li>
+</ul>
+</section>
+<section class="patch-group patch-entity-section" id="prototype-sprites">
+<h3>Герои</h3>
+<section class="patch-entity" id="prototype-priest" data-entity="priest" aria-labelledby="prototype-priest-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-priest.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-priest-title">Священник</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый охотник.</strong></li>
+<li><strong>Здоровье —</strong> 100 HP</li>
+<li><strong>Урон за удар —</strong> 18</li>
+<li><strong>Дальность атаки —</strong> 170 пикс</li>
+<li><strong>Интервал атаки —</strong> 0,7 с</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Атака по области</h5>
+<ul>
+<li><strong>Перезарядка способности —</strong> 12 с</li>
+<li>По Q наносит 35 урона врагам в пределах 125 пикс.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="prototype-sister" data-entity="sister" aria-labelledby="prototype-sister-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-sister.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-sister-title">Чумная сестра</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый охотник.</strong></li>
+<li><strong>Здоровье —</strong> 100 HP</li>
+<li><strong>Урон за удар —</strong> 18</li>
+<li><strong>Дальность атаки —</strong> 65 пикс</li>
+<li><strong>Интервал атаки —</strong> 0,7 с</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Полевое лечение</h5>
+<ul>
+<li><strong>Перезарядка способности —</strong> 12 с</li>
+<li>По Q восстанавливает себе до 35 HP.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="prototype-mage" data-entity="mage" aria-labelledby="prototype-mage-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-mage.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-mage-title">Маг</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый охотник.</strong></li>
+<li><strong>Здоровье —</strong> 100 HP</li>
+<li><strong>Урон за удар —</strong> 18</li>
+<li><strong>Дальность атаки —</strong> 170 пикс</li>
+<li><strong>Интервал атаки —</strong> 0,7 с</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Атака по области</h5>
+<ul>
+<li><strong>Перезарядка способности —</strong> 12 с</li>
+<li>По Q наносит 35 урона врагам в пределах 125 пикс.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="prototype-guard" data-entity="guard" aria-labelledby="prototype-guard-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-guard.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-guard-title">Рыцарь</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый охотник.</strong></li>
+<li><strong>Здоровье —</strong> 100 HP</li>
+<li><strong>Урон за удар —</strong> 18</li>
+<li><strong>Дальность атаки —</strong> 65 пикс</li>
+<li><strong>Интервал атаки —</strong> 0,7 с</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Атака по области</h5>
+<ul>
+<li><strong>Перезарядка способности —</strong> 12 с</li>
+<li>По Q наносит 35 урона врагам в пределах 125 пикс.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-entity-section" id="prototype-enemies">
+<h3>Нечисть и боссы</h3>
+<section class="patch-entity" id="prototype-zombie" data-entity="zombie" aria-labelledby="prototype-zombie-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-zombie.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-zombie-title">Зомби</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Здоровье —</strong> 40 HP</li>
+<li><strong>Скорость движения —</strong> 52 пикс/с</li>
+<li><strong>Контакт с героем —</strong> 5 HP/с</li>
+<li><strong>Контакт со светочем —</strong> 7 HP/с</li>
+<li><strong>Опыт за гибель —</strong> 2</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li>Идёт к игроку в пределах 150 пикс, дальше выбирает светоч.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="prototype-ghost" data-entity="ghost" aria-labelledby="prototype-ghost-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-ghost.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-ghost-title">Призрак</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Здоровье —</strong> 40 HP</li>
+<li><strong>Скорость движения —</strong> 52 пикс/с</li>
+<li><strong>Контакт с героем —</strong> 5 HP/с</li>
+<li><strong>Контакт со светочем —</strong> 7 HP/с</li>
+<li><strong>Опыт за гибель —</strong> 2</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Контактная атака</h5>
+<ul>
+<li>Использует ту же логику движения и атаки, что и зомби. Отличается цветом.</li>
+</ul>
+</div></section>
+<section class="patch-entity" id="prototype-boss" data-entity="boss" aria-labelledby="prototype-boss-title"><header class="patch-entity-header"><picture class="patch-entity-portrait"><img src="assets/history/actors/atlas-v0-boss.webp" width="176" height="132" loading="lazy" decoding="async" alt=""></picture><h4 id="prototype-boss-title">Пожиратель света</h4></header>
+<div class="patch-entity-body">
+<ul>
+<li><strong>Новый противник.</strong></li>
+<li><strong>Здоровье —</strong> 400 HP</li>
+<li><strong>Скорость движения —</strong> 34 пикс/с</li>
+<li><strong>Контакт с героем —</strong> 10 HP/с</li>
+<li><strong>Контакт со светочем —</strong> 22 HP/с</li>
+<li><strong>Опыт за гибель —</strong> 2</li>
+<li>Графика прототипа — цветная фигура.</li>
+</ul>
+<h5>Заряд против светоча</h5>
+<ul>
+<li><strong>Время заряда —</strong> 4 с</li>
+<li><strong>Урон светочу за заряд —</strong> 160</li>
+<li><strong>Порог прерывания —</strong> 72 урона</li>
+<li>Интервал между попытками — 8 с. Урон по боссу во время подготовки сбивает заряд.</li>
+</ul>
+</div></section>
+</section>
+<section class="patch-group patch-gameplay" id="prototype-gameplay">
+<h3>Геймплей</h3>
+<figure class="patch-clip"><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/history/posters/initial-prototype.webp"><img src="assets/history/initial-prototype.gif" width="640" height="360" loading="lazy" decoding="async" alt="Выбор героя и бой на первой арене"></picture><figcaption>Выбор героя и бой на первой арене <a class="patch-motion-link" href="assets/history/initial-prototype.gif">Открыть анимацию</a></figcaption></figure>
+</section>
+</article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="./">Светоч</a>
+      <a class="text-link" href="./#download">Сборка для участников</a>
+    </div>
+  </footer>
+</body>
+</html>
