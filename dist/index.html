@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100f0e">
+  <meta name="description" content="Светоч — кооперативный экшен-роглайт с элементами хоррора для 1–4 игроков. Скриншоты, механики, сборка для Windows и планы на релиз в 2027 году.">
+  <title>Светоч — кооперативный экшен-роглайт</title>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Светоч, начало страницы"><span class="brand-mark" aria-hidden="true"><i></i></span> Светоч</a>
+      <nav aria-label="Разделы сайта">
+        <a href="#game">Об игре</a>
+        <a href="#gallery">Скриншоты</a>
+        <a href="#development">Разработка</a>
+        <a href="#roadmap">Планы</a>
+      </nav>
+      <a class="button button-outline header-download" href="#download">Скачать</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <img class="hero-art" src="assets/lantern.jpg" fetchpriority="high" alt="" width="1672" height="941">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="cinder" aria-hidden="true"></span> Игра в разработке <span class="eyebrow-divider"></span> Релиз в 2027</p>
+          <h1 id="title">Светоч</h1>
+          <p class="hero-genre">Кооперативный экшен-роглайт с элементами хоррора</p>
+          <p class="hero-description">Соберите отряд, обыщите ночное трамвайное депо и удержите свет, пока со всех сторон подступает нечисть.</p>
+          <div class="actions">
+            <a class="button button-primary" href="https://github.com/Sinful-owl/Svetoch/releases/download/v0.1.0-preview.8/Svetoch-Windows-x64-v0.1.0-preview.8.zip">Скачать Preview 8</a>
+            <a class="button button-outline" href="#gallery">Смотреть скриншоты</a>
+          </div>
+          <p class="download-note">Windows x64 · ZIP · требуется доступ к репозиторию GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="facts">
+      <div class="shell fact-list">
+        <div><strong>1–4 игрока</strong><span>Соло, на одном ПК или по LAN</span></div>
+        <div><strong>Общий экран</strong><span>Высокая камера и 2D-пиксель-арт</span></div>
+        <div><strong>Оккультный нуар</strong><span>Ночной город с оттенком стимпанка</span></div>
+      </div>
+    </div>
+
+    <section class="gallery-section shell section-spacing" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading gallery-heading">
+        <div><p class="eyebrow">Скриншоты</p><h2 id="gallery-title">Из ночной вылазки</h2></div>
+        <p class="section-note">Кадры рабочей версии <br>17 ноября 2026</p>
+      </div>
+      <div class="gallery">
+        <figure class="gallery-main">
+          <a class="gallery-frame" id="screen-link" href="assets/combat.jpg" aria-label="Увеличить скриншот: Оборона светоча">
+            <img id="screen-image" src="assets/combat.jpg" width="1920" height="1080" loading="lazy" alt="Четыре охотника отбиваются от нечисти в освещённом круге светоча">
+            <span class="expand" aria-hidden="true">Увеличить</span>
+          </a>
+          <figcaption aria-live="polite"><strong id="screen-name">Оборона светоча</strong><span id="screen-description">Четыре охотника держат круг света в трамвайном депо.</span></figcaption>
+        </figure>
+        <div class="thumbs" aria-label="Выбор скриншота">
+          <button class="thumb" type="button" aria-pressed="true" data-source="assets/combat.jpg" data-name="Оборона светоча" data-alt="Четыре охотника отбиваются от нечисти в освещённом круге светоча" data-description="Четыре охотника держат круг света в трамвайном депо."><img src="assets/combat.jpg" width="1920" height="1080" loading="lazy" alt=""><span>Оборона</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-source="assets/camp.jpg" data-name="Лагерь охотников" data-alt="Четыре охотника у костра между палаткой и порталом в ночном лагере" data-description="Здесь отряд выбирает героев и собирается у портала перед вылазкой."><img src="assets/camp.jpg" width="1920" height="1080" loading="lazy" alt=""><span>Лагерь</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-source="assets/horde.jpg" data-name="Нечисть подходит к депо" data-alt="Группа врагов входит в депо слева, охотники стоят в центре у светоча" data-description="Во время обороны нечисть приходит с четырёх сторон арены."><img src="assets/horde.jpg" width="1920" height="1080" loading="lazy" alt=""><span>Натиск</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-source="assets/boss.jpg" data-name="Пожиратель света" data-alt="Финальный босс заряжает направленный на светоч удар" data-description="Отряд должен прервать удар босса, пока тот наводится на светоч."><img src="assets/boss.jpg" width="1920" height="1080" loading="lazy" alt=""><span>Босс</span></button>
+        </div>
+      </div>
+      <dialog id="lightbox" aria-labelledby="lightbox-title">
+        <div class="lightbox-body">
+          <div class="lightbox-header"><h3 id="lightbox-title">Скриншот</h3><form method="dialog"><button class="button button-outline" type="submit" autofocus>Закрыть</button></form></div>
+          <img id="lightbox-image" width="1920" height="1080" alt="">
+        </div>
+      </dialog>
+    </section>
+
+    <section class="game-section section-spacing" id="game" aria-labelledby="game-title">
+      <div class="shell">
+        <div class="section-heading game-heading">
+          <div><p class="eyebrow">Об игре</p><h2 id="game-title">Сколько сундуков<br class="wide-break"> вы рискнёте открыть?</h2></div>
+          <p>Вылазка начинается с короткого поиска. Артефакты усиливают отряд. Чем больше сундуков откроете, тем чаще во время обороны появятся оборотни. Некоторые сундуки таят мимика, проклятие, скример или потерю времени.</p>
+        </div>
+        <ol class="loop">
+          <li><span class="phase">Перед вылазкой</span><h3>Собраться в лагере</h3><p>Выберите разных охотников у палатки и всей командой войдите в портал.</p></li>
+          <li><span class="phase">2 минуты</span><h3>Обыскать депо</h3><p>Решите, какие из шести сундуков успеете открыть. В них лежат артефакты, души и золото.</p></li>
+          <li><span class="phase">10 минут</span><h3>Удержать свет</h3><p>В круге светоча враги замедляются и получают урон. Чините светоч, поднимайте союзников и приносите души, чтобы получить улучшения.</p></li>
+          <li><span class="phase">Финал</span><h3>Дойти до выхода</h3><p>Прервите заряженный удар Пожирателя света, победите босса, заберите награду и вернитесь через портал.</p></li>
+        </ol>
+
+        <div class="hunters">
+          <div class="section-heading hunters-heading"><div><h3>Охотники</h3></div><p>У каждого своё оружие и активная способность.</p></div>
+          <ul class="hunter-list">
+            <li><img src="assets/priest.png" loading="lazy" alt=""><div><h4>Священник</h4><p>Благословляет союзников, чтобы их атаки поджигали врагов.</p></div></li>
+            <li><img src="assets/sister.png" loading="lazy" alt=""><div><h4>Чумная сестра</h4><p>Лечит команду спиритической нитью и поднимает павших.</p></div></li>
+            <li><img src="assets/mage.png" loading="lazy" alt=""><div><h4>Маг</h4><p>Ставит печать, которая замедляет нечисть и наносит урон.</p></div></li>
+            <li><img src="assets/knight.png" loading="lazy" alt=""><div><h4>Дозорный</h4><p>Привлекает обычных врагов светом фонаря и принимает удары.</p></div></li>
+          </ul>
+        </div>
+
+        <div class="tech"><h3>Технологии</h3><ul aria-label="Стек игры"><li>Godot 4.7.2 Standard</li><li>GDScript</li><li>Compatibility (OpenGL)</li><li>ENet для LAN</li></ul></div>
+      </div>
+    </section>
+
+    <section class="development shell section-spacing" id="development" aria-labelledby="development-title">
+      <div class="section-heading"><div><p class="eyebrow">История проекта</p><h2 id="development-title">Таймлайн разработки</h2></div></div>
+      <ol class="timeline">
+        <li><time datetime="2026-11-11">11 ноября 2026</time><h3>Первый рабочий прототип</h3><p>Локальный кооператив, первые Windows-сборки и испытания вылазки в депо. В ноябрьских Preview появилась игра по LAN, новые виды нечисти и ловушки в сундуках.</p></li>
+        <li><time datetime="2026-11-15">15 ноября 2026</time><h3>Preview 6 и пересмотр баланса</h3><p>Обновились герои, эффекты, ночное освещение и возвращение в лагерь. Параллельно в исходниках переработали баланс обороны и прогрессию отряда.</p></li>
+        <li><time datetime="2026-11-18">18 ноября 2026</time><h3>Preview 8 для Windows</h3><p>Опубликована проверочная сборка Windows x64 с контрольной суммой SHA-256.</p></li>
+      </ol>
+    </section>
+
+    <section class="roadmap-section section-spacing" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="shell roadmap-layout">
+        <div><p class="eyebrow">Дорожная карта</p><h2 id="roadmap-title">Планы до релиза</h2><p class="roadmap-year">2027</p><p class="roadmap-note">Запланированный год выхода</p></div>
+        <ul class="roadmap-list">
+          <li><h3>Больше хоррора</h3><p>Расширить звуковые и световые признаки угрозы, добавить новые пугающие события во время поиска и обороны.</p></li>
+          <li><h3>Новые локации</h3><p>Открыть другие районы оккультного города с собственными маршрутами, аренами и угрозами.</p></li>
+          <li><h3>Новые охотники</h3><p>Добавить героев с другими стартовыми инструментами, способностями и ролями в отряде.</p></li>
+          <li><h3>Предметы и улучшения</h3><p>Расширить набор артефактов и улучшений в вылазке, проработать траты золота между вылазками.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="download-section shell section-spacing" id="download" aria-labelledby="download-title">
+      <div><p class="eyebrow">Пробная версия</p><h2 id="download-title">Скачать «Светоч»</h2><p>Preview 8 · Windows x64 · 18 ноября 2026</p><p>Распакуйте архив и запустите Svetoch.exe. Для скачивания нужен доступ к репозиторию на GitHub.</p></div>
+      <div class="download-actions"><a class="button button-primary" href="https://github.com/Sinful-owl/Svetoch/releases/download/v0.1.0-preview.8/Svetoch-Windows-x64-v0.1.0-preview.8.zip">Скачать ZIP</a><a class="text-link" href="https://github.com/Sinful-owl/Svetoch/releases/tag/v0.1.0-preview.8">Заметки к сборке и SHA-256</a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="shell footer-inner"><a class="wordmark" href="#top"><span class="brand-mark" aria-hidden="true"><i></i></span> Светоч</a><a class="text-link" href="https://github.com/Sinful-owl/Svetoch">Проект на GitHub</a></div></footer>
+</body>
+</html>
