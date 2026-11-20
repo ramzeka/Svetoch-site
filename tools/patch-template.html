@@ -7,8 +7,8 @@
   <meta name="description" content="История изменений «Светоча» по версиям. Нечисть, охотники, баланс, анимации и исправления.">
   <title>Изменения — Светоч</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
-  <link rel="stylesheet" href="changes.css">
-  <script src="changes.js" defer></script>
+  <link rel="stylesheet" href="changes.css?v=patch-playback">
+  <script src="changes.js?v=patch-playback" defer></script>
 </head>
 <body class="patch-site" id="top">
   <a class="skip-link" href="#main">К содержанию</a>
@@ -24,14 +24,19 @@
 
   <main id="main" tabindex="-1">
     <div class="patch-masthead">
-      <div class="shell patch-masthead-inner"><h1>Изменения</h1></div>
+      <div class="shell patch-masthead-inner">
+        <div>
+          <h1>Изменения</h1>
+          <div class="patch-current-version"></div>
+        </div>
+        <div class="patch-picker" hidden>
+          <label for="patch-version">Версия</label>
+          <select id="patch-version"></select>
+        </div>
+      </div>
     </div>
 
     <div class="shell patch-layout">
-      <div class="patch-picker" hidden>
-        <label for="patch-version">Версия</label>
-        <select id="patch-version"></select>
-      </div>
       <nav class="patch-versions" aria-label="Версии">
         <h2>Версии</h2>
         <ol>
