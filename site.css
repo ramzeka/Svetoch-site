@@ -127,10 +127,7 @@ dialog::backdrop { background: #080707ec; }
 .roadmap-list .roadmap-new-year::before { inset-block-start: 1.63rem; }
 .roadmap-list time { color: var(--amber); font-size: .94rem; }
 .roadmap-list h3 { margin: 0 0 .45rem; }
-.roadmap-list p + p, .roadmap-list p + .scan-report { display: inline-flex; align-items: center; gap: .45rem; min-height: 2rem; max-width: 100%; color: var(--quiet); font-size: .875rem; line-height: 1.3; text-decoration: underline; text-underline-offset: .23em; }
-.scan-report svg { flex: none; color: #91b7ff; }
-.scan-report:hover { color: var(--paper); }
-.text-link { margin-top: .55rem; }
+.roadmap-list p + p, .roadmap-list p + .text-link { margin-top: .55rem; }
 .roadmap-list .text-link { display: inline-block; }
 .roadmap-list li:last-child h3 { margin-bottom: 0; }
 @media (max-width: 520px) {
@@ -145,6 +142,9 @@ dialog::backdrop { background: #080707ec; }
 @media (max-width: 550px) {
   .download-platforms { grid-template-columns: minmax(0, 1fr); width: 100%; }
 }
+.download-actions .scan-report { display: inline-flex; justify-self: center; align-items: center; gap: .45rem; min-height: 2rem; max-width: 100%; color: var(--quiet); font-size: .875rem; line-height: 1.3; text-decoration: none; }
+.scan-report svg { flex: none; color: #91b7ff; }
+.scan-report:hover, .scan-report:focus-visible { color: var(--paper); text-decoration: underline; text-underline-offset: .23em; }
 .text-link { color: var(--amber); text-underline-offset: .23em; font-size: .94rem; }
 .text-link:hover { color: var(--paper); }
 .footer { background: #181410; border-top: 1px solid var(--line); }
