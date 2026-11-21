@@ -122,6 +122,8 @@ dialog::backdrop { background: #080707ec; }
 .roadmap-list li { position: relative; display: grid; grid-template-columns: minmax(7rem, .35fr) minmax(0, 1fr); gap: .6rem 1.5rem; padding: 0 0 1.6rem 1.35rem; border-inline-start: 1px solid var(--line); }
 .roadmap-list li:last-child { border-color: transparent; padding-bottom: 0; }
 .roadmap-list li::before { content: ''; position: absolute; inset-block-start: .48rem; inset-inline-start: -.24rem; width: .42rem; height: .42rem; transform: rotate(45deg); background: var(--amber); }
+.roadmap-list .roadmap-new-year { border-block-start: 1px solid var(--line); padding-block-start: 1.15rem; }
+.roadmap-list .roadmap-new-year::before { inset-block-start: 1.63rem; }
 .roadmap-list time { color: var(--amber); font-size: .94rem; }
 .roadmap-list h3 { margin: 0 0 .45rem; }
 .roadmap-list p + p, .roadmap-list p + .text-link { margin-top: .55rem; }
