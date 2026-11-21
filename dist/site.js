@@ -36,3 +36,23 @@ screenLink.addEventListener('click', (event) => {
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightbox) lightbox.close();
 });
+
+const trailer = document.querySelector('#trailer');
+const player = trailer.querySelector('video');
+document.querySelector('#open-trailer').addEventListener('click', () => {
+  trailer.showModal();
+  player.poster = player.dataset.poster;
+  player.src = player.dataset.src;
+  player.play().catch(() => { /* Native playback controls remain available. */ });
+});
+
+trailer.addEventListener('click', (event) => {
+  if (event.target === trailer) trailer.close();
+});
+
+trailer.addEventListener('close', () => {
+  if (trailer.open) return;
+  player.pause();
+  player.removeAttribute('src');
+  player.load();
+});
