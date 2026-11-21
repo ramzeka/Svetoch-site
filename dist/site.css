@@ -69,7 +69,7 @@ section[id] { scroll-margin-top: 1.5rem; }
 .fact-list span { color: var(--quiet); font-size: .94rem; }
 
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
-.section-heading .eyebrow, .roadmap-layout .eyebrow, .download-section .eyebrow { margin-bottom: .75rem; }
+.section-heading .eyebrow, .download-section .eyebrow { margin-bottom: .75rem; }
 .section-note { color: var(--quiet); font-size: .94rem; text-align: right; min-width: max-content; }
 .gallery { display: grid; grid-template-columns: minmax(0, 1fr) 11rem; gap: 1.25rem; }
 .gallery-main, .thumb { border: 1px solid var(--line); background: var(--panel); }
@@ -115,14 +115,21 @@ dialog::backdrop { background: #080707ec; }
 .timeline li { position: relative; border-top: 1px solid var(--line); padding: 1.35rem .55rem 0 0; }
 .timeline li::before { content: ''; position: absolute; top: -.19rem; left: .16rem; width: .35rem; height: .35rem; transform: rotate(45deg); background: var(--amber); }
 .timeline time { color: var(--amber); font-size: .94rem; }
-.timeline h3, .roadmap-list h3 { margin: .55rem 0 .45rem; }
+.timeline h3 { margin: .55rem 0 .45rem; }
 .roadmap-section { border-block: 1px solid var(--line); background: radial-gradient(ellipse at 6% 94%, #382218, transparent 58%), #1c1511; }
-.roadmap-layout { display: grid; grid-template-columns: .86fr 1.14fr; gap: clamp(2rem, 8vw, 7rem); }
-.roadmap-year { margin-top: 1rem; color: var(--amber); font: 500 clamp(5.1rem, 12vw, 9.15rem)/.97 var(--display); letter-spacing: -.07em; }
-.roadmap-note { margin-top: .7rem; color: var(--quiet); }
-.roadmap-list { list-style: none; border-top: 1px solid var(--line); }
-.roadmap-list li { border-bottom: 1px solid var(--line); padding: .8rem 0 1rem; }
-.roadmap-list h3 { margin-top: 0; }
+.roadmap-layout { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: clamp(1.6rem, 6vw, 5rem); }
+.roadmap-list { list-style: none; }
+.roadmap-list li { position: relative; display: grid; grid-template-columns: minmax(7rem, .35fr) minmax(0, 1fr); gap: .6rem 1.5rem; padding: 0 0 1.6rem 1.35rem; border-inline-start: 1px solid var(--line); }
+.roadmap-list li:last-child { border-color: transparent; padding-bottom: 0; }
+.roadmap-list li::before { content: ''; position: absolute; inset-block-start: .48rem; inset-inline-start: -.24rem; width: .42rem; height: .42rem; transform: rotate(45deg); background: var(--amber); }
+.roadmap-list time { color: var(--amber); font-size: .94rem; }
+.roadmap-list h3 { margin: 0 0 .45rem; }
+.roadmap-list p + p, .roadmap-list p + .text-link { margin-top: .55rem; }
+.roadmap-list .text-link { display: inline-block; }
+.roadmap-list li:last-child h3 { margin-bottom: 0; }
+@media (max-width: 520px) {
+  .roadmap-list li { grid-template-columns: minmax(0, 1fr); }
+}
 
 .download-section { display: flex; align-items: center; justify-content: space-between; gap: 1.8rem 3rem; }
 .download-section p:not(.eyebrow) { margin-top: .75rem; max-width: 32rem; color: var(--quiet); }
