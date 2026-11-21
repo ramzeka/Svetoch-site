@@ -111,11 +111,12 @@ dialog::backdrop { background: #080707ec; }
 .tech ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; }
 .tech li { padding: .28rem .62rem; border: 1px solid var(--line); color: var(--quiet); font-size: .875rem; }
 
-.timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.55rem; list-style: none; }
+.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.55rem; list-style: none; }
 .timeline li { position: relative; border-top: 1px solid var(--line); padding: 1.35rem .55rem 0 0; }
 .timeline li::before { content: ''; position: absolute; top: -.19rem; left: .16rem; width: .35rem; height: .35rem; transform: rotate(45deg); background: var(--amber); }
 .timeline time { color: var(--amber); font-size: .94rem; }
 .timeline h3 { margin: .55rem 0 .45rem; }
+.timeline .text-link { display: inline-block; margin-top: .55rem; }
 .roadmap-section { border-block: 1px solid var(--line); background: radial-gradient(ellipse at 6% 94%, #382218, transparent 58%), #1c1511; }
 .roadmap-layout { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); gap: clamp(1.6rem, 6vw, 5rem); }
 .roadmap-list { list-style: none; }

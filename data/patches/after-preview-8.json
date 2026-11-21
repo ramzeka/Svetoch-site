@@ -1,11 +1,12 @@
 {
   "id": "after-preview-8",
   "order": 9,
-  "label": "После Preview 8",
+  "label": "Preview 9",
   "title": "Атаки, разлом и дух",
-  "date": "2026-11-19",
+  "date": "2026-11-21",
   "source": {
-    "commit": "eceebb5a3c9b3e7b301d8770b2977851644d045d"
+    "commit": "eceebb5a3c9b3e7b301d8770b2977851644d045d",
+    "tag": "v0.1.0-preview.9"
   },
   "sections": [
     {
