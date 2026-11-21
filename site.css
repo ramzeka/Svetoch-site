@@ -89,6 +89,8 @@ dialog { width: min(calc(100% - 2rem), 85rem); max-height: calc(100dvh - 2rem); 
 dialog::backdrop { background: #080707ec; }
 .lightbox-header { display: flex; gap: 1rem; align-items: center; justify-content: space-between; padding: .75rem 1rem; }
 .lightbox-body img { width: 100%; height: auto; max-height: calc(100dvh - 6.5rem); object-fit: contain; background: #0d0c0c; }
+#trailer { max-width: 80rem; }
+#trailer video { display: block; width: 100%; height: auto; max-height: calc(100dvh - 7rem); object-fit: contain; background: #000; }
 
 .game-section { background: #171410; border-block: 1px solid var(--line); }
 .game-heading > p { max-width: 29rem; color: var(--quiet); }

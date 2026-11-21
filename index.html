@@ -7,8 +7,8 @@
   <meta name="description" content="Светоч — кооперативный экшен-роглайт с элементами хоррора для 1–4 игроков. Скриншоты, механики, сборка для Windows и планы на релиз в 2027 году.">
   <title>Светоч — кооперативный экшен-роглайт</title>
   <link rel="icon" href="assets/beacon-pipe-32.png" type="image/png">
-  <link rel="stylesheet" href="site.css?v=pipe-beacon">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="site.css?v=trailer">
+  <script src="site.js?v=trailer" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -36,12 +36,21 @@
           <p class="hero-description">Соберите отряд, обыщите ночное трамвайное депо и удержите свет, пока со всех сторон подступает нечисть.</p>
           <div class="actions">
             <a class="button button-primary" href="#download">Скачать игру</a>
-            <a class="button button-outline" href="#gallery">Смотреть скриншоты</a>
+            <button class="button button-outline" type="button" id="open-trailer" aria-haspopup="dialog" aria-controls="trailer">Смотреть трейлер</button>
           </div>
           <p class="download-note">Windows и Linux · x64 · ZIP</p>
         </div>
       </div>
     </section>
+
+    <dialog id="trailer" aria-labelledby="trailer-title">
+      <div class="lightbox-header">
+        <h3 id="trailer-title">Трейлер «Светоч»</h3>
+        <form method="dialog"><button type="submit" class="button button-outline" autofocus>Закрыть</button></form>
+      </div>
+      <video controls playsinline preload="none" width="1280" height="720" aria-labelledby="trailer-title"
+             data-src="assets/svetoch-trailer.mp4" data-poster="assets/trailer-poster.webp"></video>
+    </dialog>
 
     <div class="facts">
       <div class="shell fact-list">
