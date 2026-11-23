@@ -332,6 +332,17 @@
                   "lines": [
                     "Новая альтернативная способность. Восстанавливает до 40% максимального здоровья самому раненому живому охотнику в радиусе 125 пикс., включая саму Сестру. Без подходящей цели способность сохраняет заряд."
                   ]
+                },
+                {
+                  "type": "media",
+                  "id": "sister-first-aid",
+                  "file": "assets/history/preview-10/sister-first-aid.gif",
+                  "width": 640,
+                  "height": 514,
+                  "gameCommit": "0e1040e5828712fd920a655a61aa2fddf59e5e75",
+                  "alt": "Вокруг раненого Священника появляется зелёный круг, здоровье растёт с 30 до 70",
+                  "caption": "Чумная сестра лечит раненого союзника",
+                  "poster": "assets/history/preview-10/sister-first-aid.webp"
                 }
               ]
             },
@@ -369,6 +380,17 @@
                   "lines": [
                     "Новая альтернативная способность создаёт на 3 с круг радиусом 90 пикс. Контактный урон охотникам и светочу в круге снижается на 40%."
                   ]
+                },
+                {
+                  "type": "media",
+                  "id": "dozorny-ward",
+                  "file": "assets/history/preview-10/dozorny-ward.gif",
+                  "width": 640,
+                  "height": 552,
+                  "gameCommit": "0e1040e5828712fd920a655a61aa2fddf59e5e75",
+                  "alt": "Дозорный и светоч оказываются внутри оранжевого защитного круга",
+                  "caption": "«Заслон» накрывает Дозорного и светоч",
+                  "poster": "assets/history/preview-10/dozorny-ward.webp"
                 }
               ]
             },
@@ -400,6 +422,17 @@
                   "lines": [
                     "Новая альтернативная способность создаёт на 4 с круг у ног Священника. Враги в радиусе 85 пикс. получают 8 урона в секунду."
                   ]
+                },
+                {
+                  "type": "media",
+                  "id": "priest-consecration",
+                  "file": "assets/history/preview-10/priest-consecration.gif",
+                  "width": 640,
+                  "height": 552,
+                  "gameCommit": "0e1040e5828712fd920a655a61aa2fddf59e5e75",
+                  "alt": "Священник создаёт золотой круг у ног, зомби в зоне получают урон",
+                  "caption": "Священник наносит урон зомби внутри «Освящённого круга»",
+                  "poster": "assets/history/preview-10/priest-consecration.webp"
                 }
               ]
             }
@@ -426,6 +459,17 @@
                   "lines": [
                     "Новая альтернативная способность обездвиживает на 2 с зомби, духов, крыс и летучих мышей в радиусе 65 пикс."
                   ]
+                },
+                {
+                  "type": "media",
+                  "id": "occultist-binding",
+                  "file": "assets/history/preview-10/occultist-binding.gif",
+                  "width": 640,
+                  "height": 552,
+                  "gameCommit": "0e1040e5828712fd920a655a61aa2fddf59e5e75",
+                  "alt": "Фиолетовая печать появляется перед Оккультисткой и удерживает зомби",
+                  "caption": "Оккультистка останавливает зомби «Печатью оков»",
+                  "poster": "assets/history/preview-10/occultist-binding.webp"
                 }
               ]
             }
