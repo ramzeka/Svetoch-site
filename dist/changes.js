@@ -10,7 +10,7 @@ const defaultVersion = versionLinks[0].hash.slice(1);
 
 for (const link of versionLinks) {
   const version = link.querySelector('small').textContent;
-  const title = link.querySelector('span').textContent;
+  const title = link.dataset.pickerTitle || link.querySelector('span').textContent;
   versionPicker.add(new Option(`${version} — ${title}`, link.hash.slice(1)));
 }
 
@@ -62,18 +62,24 @@ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const clips = Array.from(document.querySelectorAll('.patch-motion-toggle'), button => {
   const figure = button.closest('figure');
   const poster = figure.querySelector('picture source');
-  const setPlaying = playing => {
-    poster.media = playing ? 'not all' : 'all';
-    button.textContent = playing ? 'Остановить GIF' : 'Воспроизвести GIF';
+  const image = figure.querySelector('img');
+  const animation = figure.querySelector('.patch-motion-link');
+  const manual = figure.dataset.motion === 'manual';
+  let playing = false;
+  const setPlaying = enabled => {
+    playing = enabled;
+    if (manual) image.src = enabled ? animation.href : poster.srcset;
+    poster.media = enabled ? 'not all' : 'all';
+    button.textContent = enabled ? 'Остановить GIF' : 'Воспроизвести GIF';
   };
-  button.addEventListener('click', () => setPlaying(poster.media === 'all'));
-  figure.querySelector('.patch-motion-link').hidden = true;
+  button.addEventListener('click', () => setPlaying(!playing));
+  animation.hidden = true;
   button.hidden = false;
-  return setPlaying;
+  return {manual, setPlaying};
 });
 
 function syncClipMotion() {
-  for (const setPlaying of clips) setPlaying(!motionPreference.matches);
+  for (const {manual, setPlaying} of clips) setPlaying(!manual && !motionPreference.matches);
 }
 
 motionPreference.addEventListener('change', syncClipMotion);

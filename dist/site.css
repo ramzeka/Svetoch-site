@@ -104,7 +104,7 @@ dialog::backdrop { background: #080707ec; }
 .hunters-heading { align-items: baseline; margin-bottom: 1.15rem; }
 .hunters-heading h3, .tech h3 { font-size: 1.7rem; }
 .hunters-heading p { color: var(--quiet); }
-.hunter-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; list-style: none; }
+.hunter-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .8rem; list-style: none; }
 .hunter-list li { background: #1c1813; border: 1px solid var(--line); padding: 1rem .9rem; }
 .hunter-list img { width: 3.3rem; height: 3.3rem; object-fit: contain; margin-bottom: .7rem; image-rendering: auto; }
 .hunter-list p { margin-top: .42rem; }
@@ -112,7 +112,7 @@ dialog::backdrop { background: #080707ec; }
 .tech ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; }
 .tech li { padding: .28rem .62rem; border: 1px solid var(--line); color: var(--quiet); font-size: .875rem; }
 
-.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.55rem; list-style: none; }
+.timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.55rem; list-style: none; }
 .timeline li { position: relative; border-top: 1px solid var(--line); padding: 1.35rem .55rem 0 0; }
 .timeline li::before { content: ''; position: absolute; top: -.19rem; left: .16rem; width: .35rem; height: .35rem; transform: rotate(45deg); background: var(--amber); }
 .timeline time { color: var(--amber); font-size: .94rem; }
@@ -160,6 +160,7 @@ dialog::backdrop { background: #080707ec; }
   .game-heading { align-items: start; flex-direction: column; gap: .9rem; }
   .gallery { grid-template-columns: minmax(0, 1fr) 8rem; gap: .8rem; }
   .loop, .hunter-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .loop li:nth-child(3) { border-left: 0; padding-left: 0; }
   .loop li:nth-child(n + 3) { border-top: 1px solid var(--line); }
 }

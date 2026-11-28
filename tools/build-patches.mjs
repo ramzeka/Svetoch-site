@@ -45,6 +45,11 @@ function dateLabel(date, year = false) {
   return d + ' ' + months[m - 1] + (year ? ' ' + y : '');
 }
 
+function updateTime(date) {
+  return date ? ' <time class="patch-update-date" datetime="' + date +
+    '">' + dateLabel(date) + '</time>' : '';
+}
+
 function asset(path) {
   if (!/^assets\/history\/(?:[a-z0-9_-]+\/)*[a-z0-9_-]+\.(gif|webp|png)$/.test(path)) {
     throw new Error('Invalid patch media path: ' + path);
@@ -63,15 +68,18 @@ function picture(media, className = '') {
   if (source.endsWith('.gif') && !media.poster) throw new Error('Missing motion fallback: ' + source);
   const still = media.poster ? asset(media.poster) : null;
   if (still?.endsWith('.gif')) throw new Error('Motion fallback must be static: ' + still);
+  const manual = media.autoplay === false;
+  if (manual && (!source.endsWith('.gif') || !still)) throw new Error('Missing manual GIF: ' + source);
   const attributes = className ? ' class="' + className + '"' : '';
   return '<picture' + attributes + '>' +
     (still ? '<source media="(prefers-reduced-motion: reduce)" srcset="' + still + '">' : '') +
-    '<img src="' + source + '" width="' + media.width + '" height="' + media.height +
+    '<img src="' + (manual ? still : source) + '" width="' + media.width + '" height="' + media.height +
     '" loading="lazy" decoding="async" alt="' + escape(media.alt ?? '') + '"></picture>';
 }
 
 function entryPicture(media, className, patch) {
-  if (media.gameCommit !== patch.source.commit) {
+  const revisions = [patch.source.commit, ...(patch.source.previousCommits ?? [])];
+  if (!revisions.includes(media.gameCommit)) {
     throw new Error('Entry art must match the game revision in ' + patch.id + ': ' + media.file);
   }
   return picture(media, className);
@@ -84,7 +92,7 @@ function changeAttribute(word) {
 
 function list(lines) {
   const items = lines.map(line => {
-    const {text: description, balance} = typeof line === 'string' ? {text: line} : line;
+    const {text: description, balance, date} = typeof line === 'string' ? {text: line} : line;
     if (typeof description !== 'string' || (balance !== undefined && !['buff', 'nerf'].includes(balance))) {
       throw new Error('Patch line requires text and an optional buff or nerf balance');
     }
@@ -97,7 +105,7 @@ function list(lines) {
     if (balance) content = content.replace(/^<strong>/, '<strong class="patch-stat-label">');
     content = content.replace(delta, numbers => '<span class="patch-delta">' +
       numbers.replace(/→/g, '<span class="patch-delta-arrow">→</span>') + '</span>');
-    return '<li' + attribute + '>' + content + '</li>';
+    return '<li' + attribute + '>' + content + updateTime(date) + '</li>';
   });
   return '<ul>\n' + items.join('\n') + '\n</ul>';
 }
@@ -111,13 +119,14 @@ function renderBlock(block, patch) {
     case 'ability':
       return '<section class="patch-ability">' +
         (block.illustration ? entryPicture(block.illustration, 'patch-ability-illustration', patch) : '') +
-        '<h5>' + escape(block.title) + '</h5>\n<div class="patch-ability-notes">\n' +
+        '<h5>' + escape(block.title) + updateTime(block.date) + '</h5>\n<div class="patch-ability-notes">\n' +
         (block.lead ? '<p class="patch-ability-lead">' + text(block.lead) + '</p>\n' : '') +
         renderBlocks(block.blocks, patch) + '\n</div></section>';
     case 'text':
       return '<p' + (block.note ? ' class="patch-detail-note"' : '') + '>' + text(block.text) + '</p>';
     case 'topic':
-      return '<section class="patch-topic"><h4>' + escape(block.title) + '</h4>\n' +
+      return '<section class="patch-topic"' + (block.id ? ' id="' + id(patch.id + '-' + block.id) + '"' : '') +
+        '><h4>' + escape(block.title) + updateTime(block.date) + '</h4>\n' +
         renderBlocks(block.blocks, patch) + '\n</section>';
     case 'actor': {
       const anchor = id(patch.id + '-' + block.id);
@@ -138,7 +147,7 @@ function renderBlock(block, patch) {
         return '<li class="patch-item-change' + (removed ? ' patch-item-removed' : '') + '">' +
           '<div class="patch-item-heading">' +
           (item.image ? entryPicture(item.image, 'patch-item-image', patch) : '') +
-          '<div class="patch-item-label"><h4>' + escape(item.name) +
+          '<div class="patch-item-label"><h4>' + escape(item.name) + updateTime(item.date) +
           '</h4><p class="patch-change-kind"' + changeAttribute(item.status.split(/\s+/, 1)[0]) + '>' + escape(item.status) + '</p>' +
           '</div></div>' + (item.lines.length ? list(item.lines) : '') + '</li>';
       }).join('\n') + '\n</ul>';
@@ -146,11 +155,14 @@ function renderBlock(block, patch) {
       return '<div class="patch-entity-clips">\n' + renderBlocks(block.blocks, patch) + '\n</div>';
     case 'media': {
       const anchor = block.id ? ' id="' + id(patch.id + '-' + block.id) + '"' : '';
-      return '<figure class="patch-clip"' + anchor + '><figcaption>' +
-        text(block.caption) + (block.file.endsWith('.gif') ?
+      const motion = block.autoplay === false ? ' data-motion="manual"' : '';
+      const controls = (block.file.endsWith('.gif') ?
           ' <a class="patch-motion-link" href="' + asset(block.file) + '">Открыть анимацию</a>' +
           ' <button class="patch-motion-toggle" type="button" hidden>Воспроизвести GIF</button>' : '') +
-        '</figcaption>' + picture(block) + '</figure>';
+        (block.full ? ' <a class="patch-full-image" href="' + asset(block.full) + '">Открыть полный кадр</a>' : '');
+      return '<figure class="patch-clip"' + anchor + motion + '><figcaption>' + text(block.caption) +
+        '</figcaption>' + picture(block) +
+        (controls ? '<div class="patch-clip-actions">' + controls + '</div>' : '') + '</figure>';
     }
     case 'link': {
       const anchor = patch.id + '-' + block.target;
@@ -191,7 +203,10 @@ function renderSection(section, patch) {
 }
 
 function renderPatch(patch) {
-  if (!commit.test(patch.source.commit)) throw new Error('Missing game commit: ' + patch.id);
+  const revisions = [patch.source.commit, ...(patch.source.previousCommits ?? [])];
+  if (revisions.some(revision => !commit.test(revision)) || new Set(revisions).size !== revisions.length) {
+    throw new Error('Invalid game revisions: ' + patch.id);
+  }
   const anchor = id(patch.id);
   const title = id(patch.id + '-title');
   const navigation = patch.sections.filter(section => section.blocks.length).map(section => '<a href="#' + anchor + '-' + section.id + '">' +
@@ -210,7 +225,8 @@ if (!patches.length || patches.some(patch => !Number.isInteger(patch.order)) ||
   throw new Error('Patch order must contain distinct integers');
 }
 const articles = patches.map(renderPatch).join('\n\n');
-const navigation = patches.map(patch => '<li><a href="#' + patch.id + '"><span>' + escape(patch.title) +
+const navigation = patches.map(patch => '<li><a href="#' + patch.id + '"' +
+  (patch.pickerTitle ? ' data-picker-title="' + escape(patch.pickerTitle) + '"' : '') + '><span>' + escape(patch.title) +
   '</span><small>' + escape(patch.label) + '</small></a></li>').join('\n');
 for (const anchor of links) {
   if (!ids.has(anchor)) throw new Error('Missing media anchor: ' + anchor);
